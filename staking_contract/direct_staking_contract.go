@@ -26,12 +26,11 @@ var (
 	_ = common.Big1
 	_ = types.BloomLookup
 	_ = event.NewSubscription
-	_ = abi.ConvertType
 )
 
 // StakingContractMetaData contains all meta data concerning the StakingContract contract.
 var StakingContractMetaData = &bind.MetaData{
-	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"DepositContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RewardPoolContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Staked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEPOSIT_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REGISTRY_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fromId\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"batchDeposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethDepositContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"validatorId\",\"type\":\"uint256\"}],\"name\":\"exit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"getExitQueue\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getExitQueueLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorToBind\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorToDeposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorToRegister\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRegisteredValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx\",\"type\":\"uint256\"}],\"name\":\"getValidatorInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"withdrawalAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"claimAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"userid\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"registerValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"}],\"name\":\"registerValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"replaceValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewardPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethDepositContract\",\"type\":\"address\"}],\"name\":\"setETHDepositContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardPool\",\"type\":\"address\"}],\"name\":\"setRewardPool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"withdrawaddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"extradata\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"DepositContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RewardPoolContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Staked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEPOSIT_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REGISTRY_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fromId\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"batchDeposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethDepositContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"validatorId\",\"type\":\"uint256\"}],\"name\":\"exit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"getExitQueue\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getExitQueueLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorToBind\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorToDeposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorToRegister\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx\",\"type\":\"uint256\"}],\"name\":\"getValidatorInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"withdrawalAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"claimAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"extraData\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"getValidatorInfos\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"address[]\",\"name\":\"withdrawalAddresses\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"claimAddresses\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"extraDatas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"registerValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"}],\"name\":\"registerValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"}],\"name\":\"replaceValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewardPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethDepositContract\",\"type\":\"address\"}],\"name\":\"setETHDepositContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardPool\",\"type\":\"address\"}],\"name\":\"setRewardPool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"withdrawaddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"extradata\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
 }
 
 // StakingContractABI is the input ABI used to generate the binding from.
@@ -135,11 +134,11 @@ func NewStakingContractFilterer(address common.Address, filterer bind.ContractFi
 
 // bindStakingContract binds a generic wrapper to an already deployed contract.
 func bindStakingContract(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
-	parsed, err := StakingContractMetaData.GetAbi()
+	parsed, err := abi.JSON(strings.NewReader(StakingContractABI))
 	if err != nil {
 		return nil, err
 	}
-	return bind.NewBoundContract(address, *parsed, caller, transactor, filterer), nil
+	return bind.NewBoundContract(address, parsed, caller, transactor, filterer), nil
 }
 
 // Call invokes the (constant) contract method with params as input values and
@@ -240,37 +239,6 @@ func (_StakingContract *StakingContractSession) DEPOSITSIZE() (*big.Int, error) 
 // Solidity: function DEPOSIT_SIZE() view returns(uint256)
 func (_StakingContract *StakingContractCallerSession) DEPOSITSIZE() (*big.Int, error) {
 	return _StakingContract.Contract.DEPOSITSIZE(&_StakingContract.CallOpts)
-}
-
-// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
-//
-// Solidity: function MANAGER_ROLE() view returns(bytes32)
-func (_StakingContract *StakingContractCaller) MANAGERROLE(opts *bind.CallOpts) ([32]byte, error) {
-	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "MANAGER_ROLE")
-
-	if err != nil {
-		return *new([32]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
-
-	return out0, err
-
-}
-
-// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
-//
-// Solidity: function MANAGER_ROLE() view returns(bytes32)
-func (_StakingContract *StakingContractSession) MANAGERROLE() ([32]byte, error) {
-	return _StakingContract.Contract.MANAGERROLE(&_StakingContract.CallOpts)
-}
-
-// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
-//
-// Solidity: function MANAGER_ROLE() view returns(bytes32)
-func (_StakingContract *StakingContractCallerSession) MANAGERROLE() ([32]byte, error) {
-	return _StakingContract.Contract.MANAGERROLE(&_StakingContract.CallOpts)
 }
 
 // PAUSERROLE is a free data retrieval call binding the contract method 0xe63ab1e9.
@@ -521,37 +489,6 @@ func (_StakingContract *StakingContractCallerSession) GetNextValidatorToRegister
 	return _StakingContract.Contract.GetNextValidatorToRegister(&_StakingContract.CallOpts)
 }
 
-// GetRegisteredValidatorsCount is a free data retrieval call binding the contract method 0x30b12c8d.
-//
-// Solidity: function getRegisteredValidatorsCount() view returns(uint256)
-func (_StakingContract *StakingContractCaller) GetRegisteredValidatorsCount(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "getRegisteredValidatorsCount")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// GetRegisteredValidatorsCount is a free data retrieval call binding the contract method 0x30b12c8d.
-//
-// Solidity: function getRegisteredValidatorsCount() view returns(uint256)
-func (_StakingContract *StakingContractSession) GetRegisteredValidatorsCount() (*big.Int, error) {
-	return _StakingContract.Contract.GetRegisteredValidatorsCount(&_StakingContract.CallOpts)
-}
-
-// GetRegisteredValidatorsCount is a free data retrieval call binding the contract method 0x30b12c8d.
-//
-// Solidity: function getRegisteredValidatorsCount() view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) GetRegisteredValidatorsCount() (*big.Int, error) {
-	return _StakingContract.Contract.GetRegisteredValidatorsCount(&_StakingContract.CallOpts)
-}
-
 // GetRoleAdmin is a free data retrieval call binding the contract method 0x248a9ca3.
 //
 // Solidity: function getRoleAdmin(bytes32 role) view returns(bytes32)
@@ -585,12 +522,12 @@ func (_StakingContract *StakingContractCallerSession) GetRoleAdmin(role [32]byte
 
 // GetValidatorInfo is a free data retrieval call binding the contract method 0xb7797537.
 //
-// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address withdrawalAddress, address claimAddress, uint256 userid)
+// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address withdrawalAddress, address claimAddress, uint256 extraData)
 func (_StakingContract *StakingContractCaller) GetValidatorInfo(opts *bind.CallOpts, idx *big.Int) (struct {
 	Pubkey            []byte
 	WithdrawalAddress common.Address
 	ClaimAddress      common.Address
-	Userid            *big.Int
+	ExtraData         *big.Int
 }, error) {
 	var out []interface{}
 	err := _StakingContract.contract.Call(opts, &out, "getValidatorInfo", idx)
@@ -599,7 +536,7 @@ func (_StakingContract *StakingContractCaller) GetValidatorInfo(opts *bind.CallO
 		Pubkey            []byte
 		WithdrawalAddress common.Address
 		ClaimAddress      common.Address
-		Userid            *big.Int
+		ExtraData         *big.Int
 	})
 	if err != nil {
 		return *outstruct, err
@@ -608,7 +545,7 @@ func (_StakingContract *StakingContractCaller) GetValidatorInfo(opts *bind.CallO
 	outstruct.Pubkey = *abi.ConvertType(out[0], new([]byte)).(*[]byte)
 	outstruct.WithdrawalAddress = *abi.ConvertType(out[1], new(common.Address)).(*common.Address)
 	outstruct.ClaimAddress = *abi.ConvertType(out[2], new(common.Address)).(*common.Address)
-	outstruct.Userid = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
+	outstruct.ExtraData = *abi.ConvertType(out[3], new(*big.Int)).(**big.Int)
 
 	return *outstruct, err
 
@@ -616,26 +553,81 @@ func (_StakingContract *StakingContractCaller) GetValidatorInfo(opts *bind.CallO
 
 // GetValidatorInfo is a free data retrieval call binding the contract method 0xb7797537.
 //
-// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address withdrawalAddress, address claimAddress, uint256 userid)
+// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address withdrawalAddress, address claimAddress, uint256 extraData)
 func (_StakingContract *StakingContractSession) GetValidatorInfo(idx *big.Int) (struct {
 	Pubkey            []byte
 	WithdrawalAddress common.Address
 	ClaimAddress      common.Address
-	Userid            *big.Int
+	ExtraData         *big.Int
 }, error) {
 	return _StakingContract.Contract.GetValidatorInfo(&_StakingContract.CallOpts, idx)
 }
 
 // GetValidatorInfo is a free data retrieval call binding the contract method 0xb7797537.
 //
-// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address withdrawalAddress, address claimAddress, uint256 userid)
+// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address withdrawalAddress, address claimAddress, uint256 extraData)
 func (_StakingContract *StakingContractCallerSession) GetValidatorInfo(idx *big.Int) (struct {
 	Pubkey            []byte
 	WithdrawalAddress common.Address
 	ClaimAddress      common.Address
-	Userid            *big.Int
+	ExtraData         *big.Int
 }, error) {
 	return _StakingContract.Contract.GetValidatorInfo(&_StakingContract.CallOpts, idx)
+}
+
+// GetValidatorInfos is a free data retrieval call binding the contract method 0x9e054533.
+//
+// Solidity: function getValidatorInfos(uint256 from, uint256 to) view returns(bytes[] pubkeys, address[] withdrawalAddresses, address[] claimAddresses, uint256[] extraDatas)
+func (_StakingContract *StakingContractCaller) GetValidatorInfos(opts *bind.CallOpts, from *big.Int, to *big.Int) (struct {
+	Pubkeys             [][]byte
+	WithdrawalAddresses []common.Address
+	ClaimAddresses      []common.Address
+	ExtraDatas          []*big.Int
+}, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getValidatorInfos", from, to)
+
+	outstruct := new(struct {
+		Pubkeys             [][]byte
+		WithdrawalAddresses []common.Address
+		ClaimAddresses      []common.Address
+		ExtraDatas          []*big.Int
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.Pubkeys = *abi.ConvertType(out[0], new([][]byte)).(*[][]byte)
+	outstruct.WithdrawalAddresses = *abi.ConvertType(out[1], new([]common.Address)).(*[]common.Address)
+	outstruct.ClaimAddresses = *abi.ConvertType(out[2], new([]common.Address)).(*[]common.Address)
+	outstruct.ExtraDatas = *abi.ConvertType(out[3], new([]*big.Int)).(*[]*big.Int)
+
+	return *outstruct, err
+
+}
+
+// GetValidatorInfos is a free data retrieval call binding the contract method 0x9e054533.
+//
+// Solidity: function getValidatorInfos(uint256 from, uint256 to) view returns(bytes[] pubkeys, address[] withdrawalAddresses, address[] claimAddresses, uint256[] extraDatas)
+func (_StakingContract *StakingContractSession) GetValidatorInfos(from *big.Int, to *big.Int) (struct {
+	Pubkeys             [][]byte
+	WithdrawalAddresses []common.Address
+	ClaimAddresses      []common.Address
+	ExtraDatas          []*big.Int
+}, error) {
+	return _StakingContract.Contract.GetValidatorInfos(&_StakingContract.CallOpts, from, to)
+}
+
+// GetValidatorInfos is a free data retrieval call binding the contract method 0x9e054533.
+//
+// Solidity: function getValidatorInfos(uint256 from, uint256 to) view returns(bytes[] pubkeys, address[] withdrawalAddresses, address[] claimAddresses, uint256[] extraDatas)
+func (_StakingContract *StakingContractCallerSession) GetValidatorInfos(from *big.Int, to *big.Int) (struct {
+	Pubkeys             [][]byte
+	WithdrawalAddresses []common.Address
+	ClaimAddresses      []common.Address
+	ExtraDatas          []*big.Int
+}, error) {
+	return _StakingContract.Contract.GetValidatorInfos(&_StakingContract.CallOpts, from, to)
 }
 
 // HasRole is a free data retrieval call binding the contract method 0x91d14854.
@@ -1054,27 +1046,6 @@ func (_StakingContract *StakingContractSession) Unpause() (*types.Transaction, e
 // Solidity: function unpause() returns()
 func (_StakingContract *StakingContractTransactorSession) Unpause() (*types.Transaction, error) {
 	return _StakingContract.Contract.Unpause(&_StakingContract.TransactOpts)
-}
-
-// Receive is a paid mutator transaction binding the contract receive function.
-//
-// Solidity: receive() payable returns()
-func (_StakingContract *StakingContractTransactor) Receive(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _StakingContract.contract.RawTransact(opts, nil) // calldata is disallowed for receive function
-}
-
-// Receive is a paid mutator transaction binding the contract receive function.
-//
-// Solidity: receive() payable returns()
-func (_StakingContract *StakingContractSession) Receive() (*types.Transaction, error) {
-	return _StakingContract.Contract.Receive(&_StakingContract.TransactOpts)
-}
-
-// Receive is a paid mutator transaction binding the contract receive function.
-//
-// Solidity: receive() payable returns()
-func (_StakingContract *StakingContractTransactorSession) Receive() (*types.Transaction, error) {
-	return _StakingContract.Contract.Receive(&_StakingContract.TransactOpts)
 }
 
 // StakingContractDepositContractSetIterator is returned from FilterDepositContractSet and is used to iterate over the raw logs and unpacked data for DepositContractSet events raised by the StakingContract contract.
