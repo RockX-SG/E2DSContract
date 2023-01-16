@@ -134,6 +134,19 @@
 				"internalType": "address",
 				"name": "addr",
 				"type": "address"
+			}
+		],
+		"name": "SignerSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "addr",
+				"type": "address"
 			},
 			{
 				"indexed": false,
@@ -211,24 +224,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "fromId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bytes[]",
-				"name": "signatures",
-				"type": "bytes[]"
-			}
-		],
-		"name": "batchDeposit",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "ethDepositContract",
 		"outputs": [
@@ -293,7 +288,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "getNextValidatorToBind",
+		"name": "getNextValidators",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -305,26 +300,19 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "getNextValidatorToDeposit",
-		"outputs": [
+		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
 			}
 		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getNextValidatorToRegister",
+		"name": "getNonce",
 		"outputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "uint32",
 				"name": "",
-				"type": "uint256"
+				"type": "uint32"
 			}
 		],
 		"stateMutability": "view",
@@ -366,11 +354,6 @@
 			},
 			{
 				"internalType": "address",
-				"name": "withdrawalAddress",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
 				"name": "claimAddress",
 				"type": "address"
 			},
@@ -402,11 +385,6 @@
 				"internalType": "bytes[]",
 				"name": "pubkeys",
 				"type": "bytes[]"
-			},
-			{
-				"internalType": "address[]",
-				"name": "withdrawalAddresses",
-				"type": "address[]"
 			},
 			{
 				"internalType": "address[]",
@@ -494,32 +472,6 @@
 	{
 		"inputs": [
 			{
-				"internalType": "bytes",
-				"name": "pubkey",
-				"type": "bytes"
-			}
-		],
-		"name": "registerValidator",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes[]",
-				"name": "pubkeys",
-				"type": "bytes[]"
-			}
-		],
-		"name": "registerValidators",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "bytes32",
 				"name": "role",
 				"type": "bytes32"
@@ -531,24 +483,6 @@
 			}
 		],
 		"name": "renounceRole",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "idx",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bytes",
-				"name": "pubkey",
-				"type": "bytes"
-			}
-		],
-		"name": "replaceValidator",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -614,13 +548,41 @@
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "withdrawaddr",
+				"name": "_signer",
 				"type": "address"
-			},
+			}
+		],
+		"name": "setSigner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
 			{
 				"internalType": "address",
 				"name": "claimaddr",
 				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "withdrawaddr",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes[]",
+				"name": "pubkeys",
+				"type": "bytes[]"
+			},
+			{
+				"internalType": "bytes[]",
+				"name": "signatures",
+				"type": "bytes[]"
+			},
+			{
+				"internalType": "bytes",
+				"name": "paramsSig",
+				"type": "bytes"
 			},
 			{
 				"internalType": "uint256",
@@ -629,12 +591,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "fee",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "deadline",
+				"name": "tips",
 				"type": "uint256"
 			}
 		],
@@ -664,9 +621,26 @@
 	},
 	{
 		"inputs": [],
+		"name": "sysSigner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "unpause",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
 	}
 ]
