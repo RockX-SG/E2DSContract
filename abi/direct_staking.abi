@@ -648,6 +648,11 @@
 	{
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "extraData",
+				"type": "uint256"
+			},
+			{
 				"internalType": "address",
 				"name": "claimaddr",
 				"type": "address"
