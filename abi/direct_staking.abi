@@ -11,19 +11,6 @@
         "inputs":[
             {
                 "indexed":false,
-                "internalType":"address",
-                "name":"addr",
-                "type":"address"
-            }
-        ],
-        "name":"DepositContractSet",
-        "type":"event"
-    },
-    {
-        "anonymous":false,
-        "inputs":[
-            {
-                "indexed":false,
                 "internalType":"uint8",
                 "name":"version",
                 "type":"uint8"
@@ -246,6 +233,21 @@
                 "internalType":"bytes32",
                 "name":"",
                 "type":"bytes32"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+
+        ],
+        "name":"___ethDepositContract_deprecated___",
+        "outputs":[
+            {
+                "internalType":"address",
+                "name":"",
+                "type":"address"
             }
         ],
         "stateMutability":"view",
@@ -606,21 +608,6 @@
             }
         ],
         "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            {
-                "internalType":"address",
-                "name":"_ethDepositContract",
-                "type":"address"
-            }
-        ],
-        "name":"setETHDepositContract",
-        "outputs":[
-
-        ],
-        "stateMutability":"nonpayable",
         "type":"function"
     },
     {

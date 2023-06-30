@@ -291,6 +291,21 @@
     },
     {
         "inputs":[
+            {
+                "internalType":"address",
+                "name":"account",
+                "type":"address"
+            }
+        ],
+        "name":"claimRewardsFor",
+        "outputs":[
+
+        ],
+        "stateMutability":"nonpayable",
+        "type":"function"
+    },
+    {
+        "inputs":[
 
         ],
         "name":"getAccountedBalance",
