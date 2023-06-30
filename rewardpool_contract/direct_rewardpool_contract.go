@@ -30,7 +30,7 @@ var (
 
 // RewardpoolContractMetaData contains all meta data concerning the RewardpoolContract contract.
 var RewardpoolContractMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"DepositContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RewardPoolContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"status\",\"type\":\"bool\"}],\"name\":\"ShangHaiStatus\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"SignerSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Staked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEPOSIT_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REGISTRY_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"validatorIds\",\"type\":\"uint256[]\"},{\"internalType\":\"bool\",\"name\":\"exitToClaimAddress\",\"type\":\"bool\"}],\"name\":\"batchEmergencyExit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"validatorIds\",\"type\":\"uint256[]\"}],\"name\":\"batchExit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"validatorId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"exitToClaimAddress\",\"type\":\"bool\"}],\"name\":\"emergencyExit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethDepositContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"validatorId\",\"type\":\"uint256\"}],\"name\":\"exit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"getExitQueue\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getExitQueueLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx\",\"type\":\"uint256\"}],\"name\":\"getValidatorInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"claimAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"extraData\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"to\",\"type\":\"uint256\"}],\"name\":\"getValidatorInfos\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"address[]\",\"name\":\"claimAddresses\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"extraDatas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewardPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethDepositContract\",\"type\":\"address\"}],\"name\":\"setETHDepositContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardPool\",\"type\":\"address\"}],\"name\":\"setRewardPool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"}],\"name\":\"setSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"withdrawaddr\",\"type\":\"address\"},{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes\",\"name\":\"paramsSig\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"extradata\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tips\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"sysSigner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"toggleShangHai\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"extraData\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"withdrawaddr\",\"type\":\"address\"},{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes\",\"name\":\"paramsSig\",\"type\":\"bytes\"}],\"name\":\"verifySigner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"ManagerFeeSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"ManagerFeeWithdrawed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"PoolJoined\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"PoolLeft\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"CONTROLLER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"claimRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingManagerRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"}],\"name\":\"getPendingReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"joinpool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"leavepool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"managerFeeShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"setManagerFeeShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"updateReward\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"accSharePoint\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"rewardBalance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"withdrawManagerRevenue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
 // RewardpoolContractABI is the input ABI used to generate the binding from.
@@ -179,6 +179,37 @@ func (_RewardpoolContract *RewardpoolContractTransactorRaw) Transact(opts *bind.
 	return _RewardpoolContract.Contract.contract.Transact(opts, method, params...)
 }
 
+// CONTROLLERROLE is a free data retrieval call binding the contract method 0x092c5b3b.
+//
+// Solidity: function CONTROLLER_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractCaller) CONTROLLERROLE(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _RewardpoolContract.contract.Call(opts, &out, "CONTROLLER_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// CONTROLLERROLE is a free data retrieval call binding the contract method 0x092c5b3b.
+//
+// Solidity: function CONTROLLER_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractSession) CONTROLLERROLE() ([32]byte, error) {
+	return _RewardpoolContract.Contract.CONTROLLERROLE(&_RewardpoolContract.CallOpts)
+}
+
+// CONTROLLERROLE is a free data retrieval call binding the contract method 0x092c5b3b.
+//
+// Solidity: function CONTROLLER_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractCallerSession) CONTROLLERROLE() ([32]byte, error) {
+	return _RewardpoolContract.Contract.CONTROLLERROLE(&_RewardpoolContract.CallOpts)
+}
+
 // DEFAULTADMINROLE is a free data retrieval call binding the contract method 0xa217fddf.
 //
 // Solidity: function DEFAULT_ADMIN_ROLE() view returns(bytes32)
@@ -210,35 +241,35 @@ func (_RewardpoolContract *RewardpoolContractCallerSession) DEFAULTADMINROLE() (
 	return _RewardpoolContract.Contract.DEFAULTADMINROLE(&_RewardpoolContract.CallOpts)
 }
 
-// DEPOSITSIZE is a free data retrieval call binding the contract method 0x36bf3325.
+// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
 //
-// Solidity: function DEPOSIT_SIZE() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractCaller) DEPOSITSIZE(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function MANAGER_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractCaller) MANAGERROLE(opts *bind.CallOpts) ([32]byte, error) {
 	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "DEPOSIT_SIZE")
+	err := _RewardpoolContract.contract.Call(opts, &out, "MANAGER_ROLE")
 
 	if err != nil {
-		return *new(*big.Int), err
+		return *new([32]byte), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
 
 	return out0, err
 
 }
 
-// DEPOSITSIZE is a free data retrieval call binding the contract method 0x36bf3325.
+// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
 //
-// Solidity: function DEPOSIT_SIZE() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractSession) DEPOSITSIZE() (*big.Int, error) {
-	return _RewardpoolContract.Contract.DEPOSITSIZE(&_RewardpoolContract.CallOpts)
+// Solidity: function MANAGER_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractSession) MANAGERROLE() ([32]byte, error) {
+	return _RewardpoolContract.Contract.MANAGERROLE(&_RewardpoolContract.CallOpts)
 }
 
-// DEPOSITSIZE is a free data retrieval call binding the contract method 0x36bf3325.
+// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
 //
-// Solidity: function DEPOSIT_SIZE() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractCallerSession) DEPOSITSIZE() (*big.Int, error) {
-	return _RewardpoolContract.Contract.DEPOSITSIZE(&_RewardpoolContract.CallOpts)
+// Solidity: function MANAGER_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractCallerSession) MANAGERROLE() ([32]byte, error) {
+	return _RewardpoolContract.Contract.MANAGERROLE(&_RewardpoolContract.CallOpts)
 }
 
 // PAUSERROLE is a free data retrieval call binding the contract method 0xe63ab1e9.
@@ -272,105 +303,12 @@ func (_RewardpoolContract *RewardpoolContractCallerSession) PAUSERROLE() ([32]by
 	return _RewardpoolContract.Contract.PAUSERROLE(&_RewardpoolContract.CallOpts)
 }
 
-// REGISTRYROLE is a free data retrieval call binding the contract method 0x42f1e879.
+// GetAccountedBalance is a free data retrieval call binding the contract method 0x33e5761f.
 //
-// Solidity: function REGISTRY_ROLE() view returns(bytes32)
-func (_RewardpoolContract *RewardpoolContractCaller) REGISTRYROLE(opts *bind.CallOpts) ([32]byte, error) {
+// Solidity: function getAccountedBalance() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCaller) GetAccountedBalance(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "REGISTRY_ROLE")
-
-	if err != nil {
-		return *new([32]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
-
-	return out0, err
-
-}
-
-// REGISTRYROLE is a free data retrieval call binding the contract method 0x42f1e879.
-//
-// Solidity: function REGISTRY_ROLE() view returns(bytes32)
-func (_RewardpoolContract *RewardpoolContractSession) REGISTRYROLE() ([32]byte, error) {
-	return _RewardpoolContract.Contract.REGISTRYROLE(&_RewardpoolContract.CallOpts)
-}
-
-// REGISTRYROLE is a free data retrieval call binding the contract method 0x42f1e879.
-//
-// Solidity: function REGISTRY_ROLE() view returns(bytes32)
-func (_RewardpoolContract *RewardpoolContractCallerSession) REGISTRYROLE() ([32]byte, error) {
-	return _RewardpoolContract.Contract.REGISTRYROLE(&_RewardpoolContract.CallOpts)
-}
-
-// EthDepositContract is a free data retrieval call binding the contract method 0x3884545d.
-//
-// Solidity: function ethDepositContract() view returns(address)
-func (_RewardpoolContract *RewardpoolContractCaller) EthDepositContract(opts *bind.CallOpts) (common.Address, error) {
-	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "ethDepositContract")
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// EthDepositContract is a free data retrieval call binding the contract method 0x3884545d.
-//
-// Solidity: function ethDepositContract() view returns(address)
-func (_RewardpoolContract *RewardpoolContractSession) EthDepositContract() (common.Address, error) {
-	return _RewardpoolContract.Contract.EthDepositContract(&_RewardpoolContract.CallOpts)
-}
-
-// EthDepositContract is a free data retrieval call binding the contract method 0x3884545d.
-//
-// Solidity: function ethDepositContract() view returns(address)
-func (_RewardpoolContract *RewardpoolContractCallerSession) EthDepositContract() (common.Address, error) {
-	return _RewardpoolContract.Contract.EthDepositContract(&_RewardpoolContract.CallOpts)
-}
-
-// GetExitQueue is a free data retrieval call binding the contract method 0x43931256.
-//
-// Solidity: function getExitQueue(uint256 from, uint256 to) view returns(uint256[])
-func (_RewardpoolContract *RewardpoolContractCaller) GetExitQueue(opts *bind.CallOpts, from *big.Int, to *big.Int) ([]*big.Int, error) {
-	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "getExitQueue", from, to)
-
-	if err != nil {
-		return *new([]*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]*big.Int)).(*[]*big.Int)
-
-	return out0, err
-
-}
-
-// GetExitQueue is a free data retrieval call binding the contract method 0x43931256.
-//
-// Solidity: function getExitQueue(uint256 from, uint256 to) view returns(uint256[])
-func (_RewardpoolContract *RewardpoolContractSession) GetExitQueue(from *big.Int, to *big.Int) ([]*big.Int, error) {
-	return _RewardpoolContract.Contract.GetExitQueue(&_RewardpoolContract.CallOpts, from, to)
-}
-
-// GetExitQueue is a free data retrieval call binding the contract method 0x43931256.
-//
-// Solidity: function getExitQueue(uint256 from, uint256 to) view returns(uint256[])
-func (_RewardpoolContract *RewardpoolContractCallerSession) GetExitQueue(from *big.Int, to *big.Int) ([]*big.Int, error) {
-	return _RewardpoolContract.Contract.GetExitQueue(&_RewardpoolContract.CallOpts, from, to)
-}
-
-// GetExitQueueLength is a free data retrieval call binding the contract method 0x559230a0.
-//
-// Solidity: function getExitQueueLength() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractCaller) GetExitQueueLength(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "getExitQueueLength")
+	err := _RewardpoolContract.contract.Call(opts, &out, "getAccountedBalance")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -382,26 +320,26 @@ func (_RewardpoolContract *RewardpoolContractCaller) GetExitQueueLength(opts *bi
 
 }
 
-// GetExitQueueLength is a free data retrieval call binding the contract method 0x559230a0.
+// GetAccountedBalance is a free data retrieval call binding the contract method 0x33e5761f.
 //
-// Solidity: function getExitQueueLength() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractSession) GetExitQueueLength() (*big.Int, error) {
-	return _RewardpoolContract.Contract.GetExitQueueLength(&_RewardpoolContract.CallOpts)
+// Solidity: function getAccountedBalance() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractSession) GetAccountedBalance() (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetAccountedBalance(&_RewardpoolContract.CallOpts)
 }
 
-// GetExitQueueLength is a free data retrieval call binding the contract method 0x559230a0.
+// GetAccountedBalance is a free data retrieval call binding the contract method 0x33e5761f.
 //
-// Solidity: function getExitQueueLength() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractCallerSession) GetExitQueueLength() (*big.Int, error) {
-	return _RewardpoolContract.Contract.GetExitQueueLength(&_RewardpoolContract.CallOpts)
+// Solidity: function getAccountedBalance() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCallerSession) GetAccountedBalance() (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetAccountedBalance(&_RewardpoolContract.CallOpts)
 }
 
-// GetNextValidators is a free data retrieval call binding the contract method 0x40cddab3.
+// GetPendingManagerRevenue is a free data retrieval call binding the contract method 0xb8f932f6.
 //
-// Solidity: function getNextValidators() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractCaller) GetNextValidators(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function getPendingManagerRevenue() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCaller) GetPendingManagerRevenue(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "getNextValidators")
+	err := _RewardpoolContract.contract.Call(opts, &out, "getPendingManagerRevenue")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -413,18 +351,49 @@ func (_RewardpoolContract *RewardpoolContractCaller) GetNextValidators(opts *bin
 
 }
 
-// GetNextValidators is a free data retrieval call binding the contract method 0x40cddab3.
+// GetPendingManagerRevenue is a free data retrieval call binding the contract method 0xb8f932f6.
 //
-// Solidity: function getNextValidators() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractSession) GetNextValidators() (*big.Int, error) {
-	return _RewardpoolContract.Contract.GetNextValidators(&_RewardpoolContract.CallOpts)
+// Solidity: function getPendingManagerRevenue() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractSession) GetPendingManagerRevenue() (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetPendingManagerRevenue(&_RewardpoolContract.CallOpts)
 }
 
-// GetNextValidators is a free data retrieval call binding the contract method 0x40cddab3.
+// GetPendingManagerRevenue is a free data retrieval call binding the contract method 0xb8f932f6.
 //
-// Solidity: function getNextValidators() view returns(uint256)
-func (_RewardpoolContract *RewardpoolContractCallerSession) GetNextValidators() (*big.Int, error) {
-	return _RewardpoolContract.Contract.GetNextValidators(&_RewardpoolContract.CallOpts)
+// Solidity: function getPendingManagerRevenue() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCallerSession) GetPendingManagerRevenue() (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetPendingManagerRevenue(&_RewardpoolContract.CallOpts)
+}
+
+// GetPendingReward is a free data retrieval call binding the contract method 0x4df9d6ba.
+//
+// Solidity: function getPendingReward(address claimaddr) view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCaller) GetPendingReward(opts *bind.CallOpts, claimaddr common.Address) (*big.Int, error) {
+	var out []interface{}
+	err := _RewardpoolContract.contract.Call(opts, &out, "getPendingReward", claimaddr)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetPendingReward is a free data retrieval call binding the contract method 0x4df9d6ba.
+//
+// Solidity: function getPendingReward(address claimaddr) view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractSession) GetPendingReward(claimaddr common.Address) (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetPendingReward(&_RewardpoolContract.CallOpts, claimaddr)
+}
+
+// GetPendingReward is a free data retrieval call binding the contract method 0x4df9d6ba.
+//
+// Solidity: function getPendingReward(address claimaddr) view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCallerSession) GetPendingReward(claimaddr common.Address) (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetPendingReward(&_RewardpoolContract.CallOpts, claimaddr)
 }
 
 // GetRoleAdmin is a free data retrieval call binding the contract method 0x248a9ca3.
@@ -458,104 +427,35 @@ func (_RewardpoolContract *RewardpoolContractCallerSession) GetRoleAdmin(role [3
 	return _RewardpoolContract.Contract.GetRoleAdmin(&_RewardpoolContract.CallOpts, role)
 }
 
-// GetValidatorInfo is a free data retrieval call binding the contract method 0xb7797537.
+// GetTotalShare is a free data retrieval call binding the contract method 0x3f06cd66.
 //
-// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address claimAddress, uint256 extraData)
-func (_RewardpoolContract *RewardpoolContractCaller) GetValidatorInfo(opts *bind.CallOpts, idx *big.Int) (struct {
-	Pubkey       []byte
-	ClaimAddress common.Address
-	ExtraData    *big.Int
-}, error) {
+// Solidity: function getTotalShare() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCaller) GetTotalShare(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "getValidatorInfo", idx)
+	err := _RewardpoolContract.contract.Call(opts, &out, "getTotalShare")
 
-	outstruct := new(struct {
-		Pubkey       []byte
-		ClaimAddress common.Address
-		ExtraData    *big.Int
-	})
 	if err != nil {
-		return *outstruct, err
+		return *new(*big.Int), err
 	}
 
-	outstruct.Pubkey = *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-	outstruct.ClaimAddress = *abi.ConvertType(out[1], new(common.Address)).(*common.Address)
-	outstruct.ExtraData = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
 
-	return *outstruct, err
+	return out0, err
 
 }
 
-// GetValidatorInfo is a free data retrieval call binding the contract method 0xb7797537.
+// GetTotalShare is a free data retrieval call binding the contract method 0x3f06cd66.
 //
-// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address claimAddress, uint256 extraData)
-func (_RewardpoolContract *RewardpoolContractSession) GetValidatorInfo(idx *big.Int) (struct {
-	Pubkey       []byte
-	ClaimAddress common.Address
-	ExtraData    *big.Int
-}, error) {
-	return _RewardpoolContract.Contract.GetValidatorInfo(&_RewardpoolContract.CallOpts, idx)
+// Solidity: function getTotalShare() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractSession) GetTotalShare() (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetTotalShare(&_RewardpoolContract.CallOpts)
 }
 
-// GetValidatorInfo is a free data retrieval call binding the contract method 0xb7797537.
+// GetTotalShare is a free data retrieval call binding the contract method 0x3f06cd66.
 //
-// Solidity: function getValidatorInfo(uint256 idx) view returns(bytes pubkey, address claimAddress, uint256 extraData)
-func (_RewardpoolContract *RewardpoolContractCallerSession) GetValidatorInfo(idx *big.Int) (struct {
-	Pubkey       []byte
-	ClaimAddress common.Address
-	ExtraData    *big.Int
-}, error) {
-	return _RewardpoolContract.Contract.GetValidatorInfo(&_RewardpoolContract.CallOpts, idx)
-}
-
-// GetValidatorInfos is a free data retrieval call binding the contract method 0x9e054533.
-//
-// Solidity: function getValidatorInfos(uint256 from, uint256 to) view returns(bytes[] pubkeys, address[] claimAddresses, uint256[] extraDatas)
-func (_RewardpoolContract *RewardpoolContractCaller) GetValidatorInfos(opts *bind.CallOpts, from *big.Int, to *big.Int) (struct {
-	Pubkeys        [][]byte
-	ClaimAddresses []common.Address
-	ExtraDatas     []*big.Int
-}, error) {
-	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "getValidatorInfos", from, to)
-
-	outstruct := new(struct {
-		Pubkeys        [][]byte
-		ClaimAddresses []common.Address
-		ExtraDatas     []*big.Int
-	})
-	if err != nil {
-		return *outstruct, err
-	}
-
-	outstruct.Pubkeys = *abi.ConvertType(out[0], new([][]byte)).(*[][]byte)
-	outstruct.ClaimAddresses = *abi.ConvertType(out[1], new([]common.Address)).(*[]common.Address)
-	outstruct.ExtraDatas = *abi.ConvertType(out[2], new([]*big.Int)).(*[]*big.Int)
-
-	return *outstruct, err
-
-}
-
-// GetValidatorInfos is a free data retrieval call binding the contract method 0x9e054533.
-//
-// Solidity: function getValidatorInfos(uint256 from, uint256 to) view returns(bytes[] pubkeys, address[] claimAddresses, uint256[] extraDatas)
-func (_RewardpoolContract *RewardpoolContractSession) GetValidatorInfos(from *big.Int, to *big.Int) (struct {
-	Pubkeys        [][]byte
-	ClaimAddresses []common.Address
-	ExtraDatas     []*big.Int
-}, error) {
-	return _RewardpoolContract.Contract.GetValidatorInfos(&_RewardpoolContract.CallOpts, from, to)
-}
-
-// GetValidatorInfos is a free data retrieval call binding the contract method 0x9e054533.
-//
-// Solidity: function getValidatorInfos(uint256 from, uint256 to) view returns(bytes[] pubkeys, address[] claimAddresses, uint256[] extraDatas)
-func (_RewardpoolContract *RewardpoolContractCallerSession) GetValidatorInfos(from *big.Int, to *big.Int) (struct {
-	Pubkeys        [][]byte
-	ClaimAddresses []common.Address
-	ExtraDatas     []*big.Int
-}, error) {
-	return _RewardpoolContract.Contract.GetValidatorInfos(&_RewardpoolContract.CallOpts, from, to)
+// Solidity: function getTotalShare() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCallerSession) GetTotalShare() (*big.Int, error) {
+	return _RewardpoolContract.Contract.GetTotalShare(&_RewardpoolContract.CallOpts)
 }
 
 // HasRole is a free data retrieval call binding the contract method 0x91d14854.
@@ -589,6 +489,37 @@ func (_RewardpoolContract *RewardpoolContractCallerSession) HasRole(role [32]byt
 	return _RewardpoolContract.Contract.HasRole(&_RewardpoolContract.CallOpts, role, account)
 }
 
+// ManagerFeeShare is a free data retrieval call binding the contract method 0xe43a4954.
+//
+// Solidity: function managerFeeShare() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCaller) ManagerFeeShare(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _RewardpoolContract.contract.Call(opts, &out, "managerFeeShare")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// ManagerFeeShare is a free data retrieval call binding the contract method 0xe43a4954.
+//
+// Solidity: function managerFeeShare() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractSession) ManagerFeeShare() (*big.Int, error) {
+	return _RewardpoolContract.Contract.ManagerFeeShare(&_RewardpoolContract.CallOpts)
+}
+
+// ManagerFeeShare is a free data retrieval call binding the contract method 0xe43a4954.
+//
+// Solidity: function managerFeeShare() view returns(uint256)
+func (_RewardpoolContract *RewardpoolContractCallerSession) ManagerFeeShare() (*big.Int, error) {
+	return _RewardpoolContract.Contract.ManagerFeeShare(&_RewardpoolContract.CallOpts)
+}
+
 // Paused is a free data retrieval call binding the contract method 0x5c975abb.
 //
 // Solidity: function paused() view returns(bool)
@@ -618,37 +549,6 @@ func (_RewardpoolContract *RewardpoolContractSession) Paused() (bool, error) {
 // Solidity: function paused() view returns(bool)
 func (_RewardpoolContract *RewardpoolContractCallerSession) Paused() (bool, error) {
 	return _RewardpoolContract.Contract.Paused(&_RewardpoolContract.CallOpts)
-}
-
-// RewardPool is a free data retrieval call binding the contract method 0x66666aa9.
-//
-// Solidity: function rewardPool() view returns(address)
-func (_RewardpoolContract *RewardpoolContractCaller) RewardPool(opts *bind.CallOpts) (common.Address, error) {
-	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "rewardPool")
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
-}
-
-// RewardPool is a free data retrieval call binding the contract method 0x66666aa9.
-//
-// Solidity: function rewardPool() view returns(address)
-func (_RewardpoolContract *RewardpoolContractSession) RewardPool() (common.Address, error) {
-	return _RewardpoolContract.Contract.RewardPool(&_RewardpoolContract.CallOpts)
-}
-
-// RewardPool is a free data retrieval call binding the contract method 0x66666aa9.
-//
-// Solidity: function rewardPool() view returns(address)
-func (_RewardpoolContract *RewardpoolContractCallerSession) RewardPool() (common.Address, error) {
-	return _RewardpoolContract.Contract.RewardPool(&_RewardpoolContract.CallOpts)
 }
 
 // SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
@@ -682,150 +582,75 @@ func (_RewardpoolContract *RewardpoolContractCallerSession) SupportsInterface(in
 	return _RewardpoolContract.Contract.SupportsInterface(&_RewardpoolContract.CallOpts, interfaceId)
 }
 
-// SysSigner is a free data retrieval call binding the contract method 0xfa734b1c.
+// UserInfo is a free data retrieval call binding the contract method 0x1959a002.
 //
-// Solidity: function sysSigner() view returns(address)
-func (_RewardpoolContract *RewardpoolContractCaller) SysSigner(opts *bind.CallOpts) (common.Address, error) {
+// Solidity: function userInfo(address ) view returns(uint256 accSharePoint, uint256 amount, uint256 rewardBalance)
+func (_RewardpoolContract *RewardpoolContractCaller) UserInfo(opts *bind.CallOpts, arg0 common.Address) (struct {
+	AccSharePoint *big.Int
+	Amount        *big.Int
+	RewardBalance *big.Int
+}, error) {
 	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "sysSigner")
+	err := _RewardpoolContract.contract.Call(opts, &out, "userInfo", arg0)
 
+	outstruct := new(struct {
+		AccSharePoint *big.Int
+		Amount        *big.Int
+		RewardBalance *big.Int
+	})
 	if err != nil {
-		return *new(common.Address), err
+		return *outstruct, err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+	outstruct.AccSharePoint = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	outstruct.Amount = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
+	outstruct.RewardBalance = *abi.ConvertType(out[2], new(*big.Int)).(**big.Int)
 
-	return out0, err
-
-}
-
-// SysSigner is a free data retrieval call binding the contract method 0xfa734b1c.
-//
-// Solidity: function sysSigner() view returns(address)
-func (_RewardpoolContract *RewardpoolContractSession) SysSigner() (common.Address, error) {
-	return _RewardpoolContract.Contract.SysSigner(&_RewardpoolContract.CallOpts)
-}
-
-// SysSigner is a free data retrieval call binding the contract method 0xfa734b1c.
-//
-// Solidity: function sysSigner() view returns(address)
-func (_RewardpoolContract *RewardpoolContractCallerSession) SysSigner() (common.Address, error) {
-	return _RewardpoolContract.Contract.SysSigner(&_RewardpoolContract.CallOpts)
-}
-
-// VerifySigner is a free data retrieval call binding the contract method 0x24361e1b.
-//
-// Solidity: function verifySigner(uint256 extraData, address claimaddr, address withdrawaddr, bytes[] pubkeys, bytes[] signatures, bytes paramsSig) view returns(bool)
-func (_RewardpoolContract *RewardpoolContractCaller) VerifySigner(opts *bind.CallOpts, extraData *big.Int, claimaddr common.Address, withdrawaddr common.Address, pubkeys [][]byte, signatures [][]byte, paramsSig []byte) (bool, error) {
-	var out []interface{}
-	err := _RewardpoolContract.contract.Call(opts, &out, "verifySigner", extraData, claimaddr, withdrawaddr, pubkeys, signatures, paramsSig)
-
-	if err != nil {
-		return *new(bool), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
-
-	return out0, err
+	return *outstruct, err
 
 }
 
-// VerifySigner is a free data retrieval call binding the contract method 0x24361e1b.
+// UserInfo is a free data retrieval call binding the contract method 0x1959a002.
 //
-// Solidity: function verifySigner(uint256 extraData, address claimaddr, address withdrawaddr, bytes[] pubkeys, bytes[] signatures, bytes paramsSig) view returns(bool)
-func (_RewardpoolContract *RewardpoolContractSession) VerifySigner(extraData *big.Int, claimaddr common.Address, withdrawaddr common.Address, pubkeys [][]byte, signatures [][]byte, paramsSig []byte) (bool, error) {
-	return _RewardpoolContract.Contract.VerifySigner(&_RewardpoolContract.CallOpts, extraData, claimaddr, withdrawaddr, pubkeys, signatures, paramsSig)
+// Solidity: function userInfo(address ) view returns(uint256 accSharePoint, uint256 amount, uint256 rewardBalance)
+func (_RewardpoolContract *RewardpoolContractSession) UserInfo(arg0 common.Address) (struct {
+	AccSharePoint *big.Int
+	Amount        *big.Int
+	RewardBalance *big.Int
+}, error) {
+	return _RewardpoolContract.Contract.UserInfo(&_RewardpoolContract.CallOpts, arg0)
 }
 
-// VerifySigner is a free data retrieval call binding the contract method 0x24361e1b.
+// UserInfo is a free data retrieval call binding the contract method 0x1959a002.
 //
-// Solidity: function verifySigner(uint256 extraData, address claimaddr, address withdrawaddr, bytes[] pubkeys, bytes[] signatures, bytes paramsSig) view returns(bool)
-func (_RewardpoolContract *RewardpoolContractCallerSession) VerifySigner(extraData *big.Int, claimaddr common.Address, withdrawaddr common.Address, pubkeys [][]byte, signatures [][]byte, paramsSig []byte) (bool, error) {
-	return _RewardpoolContract.Contract.VerifySigner(&_RewardpoolContract.CallOpts, extraData, claimaddr, withdrawaddr, pubkeys, signatures, paramsSig)
+// Solidity: function userInfo(address ) view returns(uint256 accSharePoint, uint256 amount, uint256 rewardBalance)
+func (_RewardpoolContract *RewardpoolContractCallerSession) UserInfo(arg0 common.Address) (struct {
+	AccSharePoint *big.Int
+	Amount        *big.Int
+	RewardBalance *big.Int
+}, error) {
+	return _RewardpoolContract.Contract.UserInfo(&_RewardpoolContract.CallOpts, arg0)
 }
 
-// BatchEmergencyExit is a paid mutator transaction binding the contract method 0x2393df84.
+// ClaimRewards is a paid mutator transaction binding the contract method 0x9a99b4f0.
 //
-// Solidity: function batchEmergencyExit(uint256[] validatorIds, bool exitToClaimAddress) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) BatchEmergencyExit(opts *bind.TransactOpts, validatorIds []*big.Int, exitToClaimAddress bool) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "batchEmergencyExit", validatorIds, exitToClaimAddress)
+// Solidity: function claimRewards(address beneficiary, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) ClaimRewards(opts *bind.TransactOpts, beneficiary common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "claimRewards", beneficiary, amount)
 }
 
-// BatchEmergencyExit is a paid mutator transaction binding the contract method 0x2393df84.
+// ClaimRewards is a paid mutator transaction binding the contract method 0x9a99b4f0.
 //
-// Solidity: function batchEmergencyExit(uint256[] validatorIds, bool exitToClaimAddress) returns()
-func (_RewardpoolContract *RewardpoolContractSession) BatchEmergencyExit(validatorIds []*big.Int, exitToClaimAddress bool) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.BatchEmergencyExit(&_RewardpoolContract.TransactOpts, validatorIds, exitToClaimAddress)
+// Solidity: function claimRewards(address beneficiary, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractSession) ClaimRewards(beneficiary common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.ClaimRewards(&_RewardpoolContract.TransactOpts, beneficiary, amount)
 }
 
-// BatchEmergencyExit is a paid mutator transaction binding the contract method 0x2393df84.
+// ClaimRewards is a paid mutator transaction binding the contract method 0x9a99b4f0.
 //
-// Solidity: function batchEmergencyExit(uint256[] validatorIds, bool exitToClaimAddress) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) BatchEmergencyExit(validatorIds []*big.Int, exitToClaimAddress bool) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.BatchEmergencyExit(&_RewardpoolContract.TransactOpts, validatorIds, exitToClaimAddress)
-}
-
-// BatchExit is a paid mutator transaction binding the contract method 0x4dd1fb0b.
-//
-// Solidity: function batchExit(uint256[] validatorIds) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) BatchExit(opts *bind.TransactOpts, validatorIds []*big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "batchExit", validatorIds)
-}
-
-// BatchExit is a paid mutator transaction binding the contract method 0x4dd1fb0b.
-//
-// Solidity: function batchExit(uint256[] validatorIds) returns()
-func (_RewardpoolContract *RewardpoolContractSession) BatchExit(validatorIds []*big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.BatchExit(&_RewardpoolContract.TransactOpts, validatorIds)
-}
-
-// BatchExit is a paid mutator transaction binding the contract method 0x4dd1fb0b.
-//
-// Solidity: function batchExit(uint256[] validatorIds) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) BatchExit(validatorIds []*big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.BatchExit(&_RewardpoolContract.TransactOpts, validatorIds)
-}
-
-// EmergencyExit is a paid mutator transaction binding the contract method 0xf806e87a.
-//
-// Solidity: function emergencyExit(uint256 validatorId, bool exitToClaimAddress) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) EmergencyExit(opts *bind.TransactOpts, validatorId *big.Int, exitToClaimAddress bool) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "emergencyExit", validatorId, exitToClaimAddress)
-}
-
-// EmergencyExit is a paid mutator transaction binding the contract method 0xf806e87a.
-//
-// Solidity: function emergencyExit(uint256 validatorId, bool exitToClaimAddress) returns()
-func (_RewardpoolContract *RewardpoolContractSession) EmergencyExit(validatorId *big.Int, exitToClaimAddress bool) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.EmergencyExit(&_RewardpoolContract.TransactOpts, validatorId, exitToClaimAddress)
-}
-
-// EmergencyExit is a paid mutator transaction binding the contract method 0xf806e87a.
-//
-// Solidity: function emergencyExit(uint256 validatorId, bool exitToClaimAddress) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) EmergencyExit(validatorId *big.Int, exitToClaimAddress bool) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.EmergencyExit(&_RewardpoolContract.TransactOpts, validatorId, exitToClaimAddress)
-}
-
-// Exit is a paid mutator transaction binding the contract method 0x7f8661a1.
-//
-// Solidity: function exit(uint256 validatorId) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) Exit(opts *bind.TransactOpts, validatorId *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "exit", validatorId)
-}
-
-// Exit is a paid mutator transaction binding the contract method 0x7f8661a1.
-//
-// Solidity: function exit(uint256 validatorId) returns()
-func (_RewardpoolContract *RewardpoolContractSession) Exit(validatorId *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Exit(&_RewardpoolContract.TransactOpts, validatorId)
-}
-
-// Exit is a paid mutator transaction binding the contract method 0x7f8661a1.
-//
-// Solidity: function exit(uint256 validatorId) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) Exit(validatorId *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Exit(&_RewardpoolContract.TransactOpts, validatorId)
+// Solidity: function claimRewards(address beneficiary, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) ClaimRewards(beneficiary common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.ClaimRewards(&_RewardpoolContract.TransactOpts, beneficiary, amount)
 }
 
 // GrantRole is a paid mutator transaction binding the contract method 0x2f2ff15d.
@@ -868,6 +693,48 @@ func (_RewardpoolContract *RewardpoolContractSession) Initialize() (*types.Trans
 // Solidity: function initialize() returns()
 func (_RewardpoolContract *RewardpoolContractTransactorSession) Initialize() (*types.Transaction, error) {
 	return _RewardpoolContract.Contract.Initialize(&_RewardpoolContract.TransactOpts)
+}
+
+// Joinpool is a paid mutator transaction binding the contract method 0x3dc64df2.
+//
+// Solidity: function joinpool(address claimaddr, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) Joinpool(opts *bind.TransactOpts, claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "joinpool", claimaddr, amount)
+}
+
+// Joinpool is a paid mutator transaction binding the contract method 0x3dc64df2.
+//
+// Solidity: function joinpool(address claimaddr, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractSession) Joinpool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.Joinpool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
+}
+
+// Joinpool is a paid mutator transaction binding the contract method 0x3dc64df2.
+//
+// Solidity: function joinpool(address claimaddr, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) Joinpool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.Joinpool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
+}
+
+// Leavepool is a paid mutator transaction binding the contract method 0xf7eabbf1.
+//
+// Solidity: function leavepool(address claimaddr, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) Leavepool(opts *bind.TransactOpts, claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "leavepool", claimaddr, amount)
+}
+
+// Leavepool is a paid mutator transaction binding the contract method 0xf7eabbf1.
+//
+// Solidity: function leavepool(address claimaddr, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractSession) Leavepool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.Leavepool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
+}
+
+// Leavepool is a paid mutator transaction binding the contract method 0xf7eabbf1.
+//
+// Solidity: function leavepool(address claimaddr, uint256 amount) returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) Leavepool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.Leavepool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
 }
 
 // Pause is a paid mutator transaction binding the contract method 0x8456cb59.
@@ -933,109 +800,25 @@ func (_RewardpoolContract *RewardpoolContractTransactorSession) RevokeRole(role 
 	return _RewardpoolContract.Contract.RevokeRole(&_RewardpoolContract.TransactOpts, role, account)
 }
 
-// SetETHDepositContract is a paid mutator transaction binding the contract method 0x91b66caa.
+// SetManagerFeeShare is a paid mutator transaction binding the contract method 0x755d7dd3.
 //
-// Solidity: function setETHDepositContract(address _ethDepositContract) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) SetETHDepositContract(opts *bind.TransactOpts, _ethDepositContract common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "setETHDepositContract", _ethDepositContract)
+// Solidity: function setManagerFeeShare(uint256 milli) returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) SetManagerFeeShare(opts *bind.TransactOpts, milli *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "setManagerFeeShare", milli)
 }
 
-// SetETHDepositContract is a paid mutator transaction binding the contract method 0x91b66caa.
+// SetManagerFeeShare is a paid mutator transaction binding the contract method 0x755d7dd3.
 //
-// Solidity: function setETHDepositContract(address _ethDepositContract) returns()
-func (_RewardpoolContract *RewardpoolContractSession) SetETHDepositContract(_ethDepositContract common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.SetETHDepositContract(&_RewardpoolContract.TransactOpts, _ethDepositContract)
+// Solidity: function setManagerFeeShare(uint256 milli) returns()
+func (_RewardpoolContract *RewardpoolContractSession) SetManagerFeeShare(milli *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.SetManagerFeeShare(&_RewardpoolContract.TransactOpts, milli)
 }
 
-// SetETHDepositContract is a paid mutator transaction binding the contract method 0x91b66caa.
+// SetManagerFeeShare is a paid mutator transaction binding the contract method 0x755d7dd3.
 //
-// Solidity: function setETHDepositContract(address _ethDepositContract) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) SetETHDepositContract(_ethDepositContract common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.SetETHDepositContract(&_RewardpoolContract.TransactOpts, _ethDepositContract)
-}
-
-// SetRewardPool is a paid mutator transaction binding the contract method 0x78238c37.
-//
-// Solidity: function setRewardPool(address _rewardPool) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) SetRewardPool(opts *bind.TransactOpts, _rewardPool common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "setRewardPool", _rewardPool)
-}
-
-// SetRewardPool is a paid mutator transaction binding the contract method 0x78238c37.
-//
-// Solidity: function setRewardPool(address _rewardPool) returns()
-func (_RewardpoolContract *RewardpoolContractSession) SetRewardPool(_rewardPool common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.SetRewardPool(&_RewardpoolContract.TransactOpts, _rewardPool)
-}
-
-// SetRewardPool is a paid mutator transaction binding the contract method 0x78238c37.
-//
-// Solidity: function setRewardPool(address _rewardPool) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) SetRewardPool(_rewardPool common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.SetRewardPool(&_RewardpoolContract.TransactOpts, _rewardPool)
-}
-
-// SetSigner is a paid mutator transaction binding the contract method 0x6c19e783.
-//
-// Solidity: function setSigner(address _signer) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) SetSigner(opts *bind.TransactOpts, _signer common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "setSigner", _signer)
-}
-
-// SetSigner is a paid mutator transaction binding the contract method 0x6c19e783.
-//
-// Solidity: function setSigner(address _signer) returns()
-func (_RewardpoolContract *RewardpoolContractSession) SetSigner(_signer common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.SetSigner(&_RewardpoolContract.TransactOpts, _signer)
-}
-
-// SetSigner is a paid mutator transaction binding the contract method 0x6c19e783.
-//
-// Solidity: function setSigner(address _signer) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) SetSigner(_signer common.Address) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.SetSigner(&_RewardpoolContract.TransactOpts, _signer)
-}
-
-// Stake is a paid mutator transaction binding the contract method 0x238d11bf.
-//
-// Solidity: function stake(address claimaddr, address withdrawaddr, bytes[] pubkeys, bytes[] signatures, bytes paramsSig, uint256 extradata, uint256 tips) payable returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) Stake(opts *bind.TransactOpts, claimaddr common.Address, withdrawaddr common.Address, pubkeys [][]byte, signatures [][]byte, paramsSig []byte, extradata *big.Int, tips *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "stake", claimaddr, withdrawaddr, pubkeys, signatures, paramsSig, extradata, tips)
-}
-
-// Stake is a paid mutator transaction binding the contract method 0x238d11bf.
-//
-// Solidity: function stake(address claimaddr, address withdrawaddr, bytes[] pubkeys, bytes[] signatures, bytes paramsSig, uint256 extradata, uint256 tips) payable returns()
-func (_RewardpoolContract *RewardpoolContractSession) Stake(claimaddr common.Address, withdrawaddr common.Address, pubkeys [][]byte, signatures [][]byte, paramsSig []byte, extradata *big.Int, tips *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Stake(&_RewardpoolContract.TransactOpts, claimaddr, withdrawaddr, pubkeys, signatures, paramsSig, extradata, tips)
-}
-
-// Stake is a paid mutator transaction binding the contract method 0x238d11bf.
-//
-// Solidity: function stake(address claimaddr, address withdrawaddr, bytes[] pubkeys, bytes[] signatures, bytes paramsSig, uint256 extradata, uint256 tips) payable returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) Stake(claimaddr common.Address, withdrawaddr common.Address, pubkeys [][]byte, signatures [][]byte, paramsSig []byte, extradata *big.Int, tips *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Stake(&_RewardpoolContract.TransactOpts, claimaddr, withdrawaddr, pubkeys, signatures, paramsSig, extradata, tips)
-}
-
-// ToggleShangHai is a paid mutator transaction binding the contract method 0x15f6476f.
-//
-// Solidity: function toggleShangHai() returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) ToggleShangHai(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "toggleShangHai")
-}
-
-// ToggleShangHai is a paid mutator transaction binding the contract method 0x15f6476f.
-//
-// Solidity: function toggleShangHai() returns()
-func (_RewardpoolContract *RewardpoolContractSession) ToggleShangHai() (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.ToggleShangHai(&_RewardpoolContract.TransactOpts)
-}
-
-// ToggleShangHai is a paid mutator transaction binding the contract method 0x15f6476f.
-//
-// Solidity: function toggleShangHai() returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) ToggleShangHai() (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.ToggleShangHai(&_RewardpoolContract.TransactOpts)
+// Solidity: function setManagerFeeShare(uint256 milli) returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) SetManagerFeeShare(milli *big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.SetManagerFeeShare(&_RewardpoolContract.TransactOpts, milli)
 }
 
 // Unpause is a paid mutator transaction binding the contract method 0x3f4ba83a.
@@ -1059,6 +842,48 @@ func (_RewardpoolContract *RewardpoolContractTransactorSession) Unpause() (*type
 	return _RewardpoolContract.Contract.Unpause(&_RewardpoolContract.TransactOpts)
 }
 
+// UpdateReward is a paid mutator transaction binding the contract method 0xf36c0a72.
+//
+// Solidity: function updateReward() returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) UpdateReward(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "updateReward")
+}
+
+// UpdateReward is a paid mutator transaction binding the contract method 0xf36c0a72.
+//
+// Solidity: function updateReward() returns()
+func (_RewardpoolContract *RewardpoolContractSession) UpdateReward() (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.UpdateReward(&_RewardpoolContract.TransactOpts)
+}
+
+// UpdateReward is a paid mutator transaction binding the contract method 0xf36c0a72.
+//
+// Solidity: function updateReward() returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) UpdateReward() (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.UpdateReward(&_RewardpoolContract.TransactOpts)
+}
+
+// WithdrawManagerRevenue is a paid mutator transaction binding the contract method 0xac9a5f56.
+//
+// Solidity: function withdrawManagerRevenue(uint256 amount, address to) returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) WithdrawManagerRevenue(opts *bind.TransactOpts, amount *big.Int, to common.Address) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "withdrawManagerRevenue", amount, to)
+}
+
+// WithdrawManagerRevenue is a paid mutator transaction binding the contract method 0xac9a5f56.
+//
+// Solidity: function withdrawManagerRevenue(uint256 amount, address to) returns()
+func (_RewardpoolContract *RewardpoolContractSession) WithdrawManagerRevenue(amount *big.Int, to common.Address) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.WithdrawManagerRevenue(&_RewardpoolContract.TransactOpts, amount, to)
+}
+
+// WithdrawManagerRevenue is a paid mutator transaction binding the contract method 0xac9a5f56.
+//
+// Solidity: function withdrawManagerRevenue(uint256 amount, address to) returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) WithdrawManagerRevenue(amount *big.Int, to common.Address) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.WithdrawManagerRevenue(&_RewardpoolContract.TransactOpts, amount, to)
+}
+
 // Receive is a paid mutator transaction binding the contract receive function.
 //
 // Solidity: receive() payable returns()
@@ -1080,9 +905,9 @@ func (_RewardpoolContract *RewardpoolContractTransactorSession) Receive() (*type
 	return _RewardpoolContract.Contract.Receive(&_RewardpoolContract.TransactOpts)
 }
 
-// RewardpoolContractDepositContractSetIterator is returned from FilterDepositContractSet and is used to iterate over the raw logs and unpacked data for DepositContractSet events raised by the RewardpoolContract contract.
-type RewardpoolContractDepositContractSetIterator struct {
-	Event *RewardpoolContractDepositContractSet // Event containing the contract specifics and raw log
+// RewardpoolContractClaimedIterator is returned from FilterClaimed and is used to iterate over the raw logs and unpacked data for Claimed events raised by the RewardpoolContract contract.
+type RewardpoolContractClaimedIterator struct {
+	Event *RewardpoolContractClaimed // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1096,7 +921,7 @@ type RewardpoolContractDepositContractSetIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractDepositContractSetIterator) Next() bool {
+func (it *RewardpoolContractClaimedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1105,7 +930,7 @@ func (it *RewardpoolContractDepositContractSetIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(RewardpoolContractDepositContractSet)
+			it.Event = new(RewardpoolContractClaimed)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1120,7 +945,7 @@ func (it *RewardpoolContractDepositContractSetIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(RewardpoolContractDepositContractSet)
+		it.Event = new(RewardpoolContractClaimed)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1136,41 +961,42 @@ func (it *RewardpoolContractDepositContractSetIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractDepositContractSetIterator) Error() error {
+func (it *RewardpoolContractClaimedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *RewardpoolContractDepositContractSetIterator) Close() error {
+func (it *RewardpoolContractClaimedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// RewardpoolContractDepositContractSet represents a DepositContractSet event raised by the RewardpoolContract contract.
-type RewardpoolContractDepositContractSet struct {
-	Addr common.Address
-	Raw  types.Log // Blockchain specific contextual infos
+// RewardpoolContractClaimed represents a Claimed event raised by the RewardpoolContract contract.
+type RewardpoolContractClaimed struct {
+	Beneficiary common.Address
+	Amount      *big.Int
+	Raw         types.Log // Blockchain specific contextual infos
 }
 
-// FilterDepositContractSet is a free log retrieval operation binding the contract event 0x1781ac9526b978975dba0fd26a33e044a55a7ace054a3ee7efa5f8459513bead.
+// FilterClaimed is a free log retrieval operation binding the contract event 0xd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a.
 //
-// Solidity: event DepositContractSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterDepositContractSet(opts *bind.FilterOpts) (*RewardpoolContractDepositContractSetIterator, error) {
+// Solidity: event Claimed(address beneficiary, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) FilterClaimed(opts *bind.FilterOpts) (*RewardpoolContractClaimedIterator, error) {
 
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "DepositContractSet")
+	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "Claimed")
 	if err != nil {
 		return nil, err
 	}
-	return &RewardpoolContractDepositContractSetIterator{contract: _RewardpoolContract.contract, event: "DepositContractSet", logs: logs, sub: sub}, nil
+	return &RewardpoolContractClaimedIterator{contract: _RewardpoolContract.contract, event: "Claimed", logs: logs, sub: sub}, nil
 }
 
-// WatchDepositContractSet is a free log subscription operation binding the contract event 0x1781ac9526b978975dba0fd26a33e044a55a7ace054a3ee7efa5f8459513bead.
+// WatchClaimed is a free log subscription operation binding the contract event 0xd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a.
 //
-// Solidity: event DepositContractSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchDepositContractSet(opts *bind.WatchOpts, sink chan<- *RewardpoolContractDepositContractSet) (event.Subscription, error) {
+// Solidity: event Claimed(address beneficiary, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) WatchClaimed(opts *bind.WatchOpts, sink chan<- *RewardpoolContractClaimed) (event.Subscription, error) {
 
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "DepositContractSet")
+	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "Claimed")
 	if err != nil {
 		return nil, err
 	}
@@ -1180,8 +1006,8 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchDepositContractSet(o
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractDepositContractSet)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "DepositContractSet", log); err != nil {
+				event := new(RewardpoolContractClaimed)
+				if err := _RewardpoolContract.contract.UnpackLog(event, "Claimed", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1202,12 +1028,12 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchDepositContractSet(o
 	}), nil
 }
 
-// ParseDepositContractSet is a log parse operation binding the contract event 0x1781ac9526b978975dba0fd26a33e044a55a7ace054a3ee7efa5f8459513bead.
+// ParseClaimed is a log parse operation binding the contract event 0xd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a.
 //
-// Solidity: event DepositContractSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParseDepositContractSet(log types.Log) (*RewardpoolContractDepositContractSet, error) {
-	event := new(RewardpoolContractDepositContractSet)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "DepositContractSet", log); err != nil {
+// Solidity: event Claimed(address beneficiary, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) ParseClaimed(log types.Log) (*RewardpoolContractClaimed, error) {
+	event := new(RewardpoolContractClaimed)
+	if err := _RewardpoolContract.contract.UnpackLog(event, "Claimed", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -1348,6 +1174,275 @@ func (_RewardpoolContract *RewardpoolContractFilterer) ParseInitialized(log type
 	return event, nil
 }
 
+// RewardpoolContractManagerFeeSetIterator is returned from FilterManagerFeeSet and is used to iterate over the raw logs and unpacked data for ManagerFeeSet events raised by the RewardpoolContract contract.
+type RewardpoolContractManagerFeeSetIterator struct {
+	Event *RewardpoolContractManagerFeeSet // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *RewardpoolContractManagerFeeSetIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(RewardpoolContractManagerFeeSet)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(RewardpoolContractManagerFeeSet)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *RewardpoolContractManagerFeeSetIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *RewardpoolContractManagerFeeSetIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// RewardpoolContractManagerFeeSet represents a ManagerFeeSet event raised by the RewardpoolContract contract.
+type RewardpoolContractManagerFeeSet struct {
+	Milli *big.Int
+	Raw   types.Log // Blockchain specific contextual infos
+}
+
+// FilterManagerFeeSet is a free log retrieval operation binding the contract event 0x4de90ec86e1bc56c192e2399bacbd10bdaba720caca606354d66c5cb33d6802b.
+//
+// Solidity: event ManagerFeeSet(uint256 milli)
+func (_RewardpoolContract *RewardpoolContractFilterer) FilterManagerFeeSet(opts *bind.FilterOpts) (*RewardpoolContractManagerFeeSetIterator, error) {
+
+	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "ManagerFeeSet")
+	if err != nil {
+		return nil, err
+	}
+	return &RewardpoolContractManagerFeeSetIterator{contract: _RewardpoolContract.contract, event: "ManagerFeeSet", logs: logs, sub: sub}, nil
+}
+
+// WatchManagerFeeSet is a free log subscription operation binding the contract event 0x4de90ec86e1bc56c192e2399bacbd10bdaba720caca606354d66c5cb33d6802b.
+//
+// Solidity: event ManagerFeeSet(uint256 milli)
+func (_RewardpoolContract *RewardpoolContractFilterer) WatchManagerFeeSet(opts *bind.WatchOpts, sink chan<- *RewardpoolContractManagerFeeSet) (event.Subscription, error) {
+
+	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "ManagerFeeSet")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(RewardpoolContractManagerFeeSet)
+				if err := _RewardpoolContract.contract.UnpackLog(event, "ManagerFeeSet", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseManagerFeeSet is a log parse operation binding the contract event 0x4de90ec86e1bc56c192e2399bacbd10bdaba720caca606354d66c5cb33d6802b.
+//
+// Solidity: event ManagerFeeSet(uint256 milli)
+func (_RewardpoolContract *RewardpoolContractFilterer) ParseManagerFeeSet(log types.Log) (*RewardpoolContractManagerFeeSet, error) {
+	event := new(RewardpoolContractManagerFeeSet)
+	if err := _RewardpoolContract.contract.UnpackLog(event, "ManagerFeeSet", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// RewardpoolContractManagerFeeWithdrawedIterator is returned from FilterManagerFeeWithdrawed and is used to iterate over the raw logs and unpacked data for ManagerFeeWithdrawed events raised by the RewardpoolContract contract.
+type RewardpoolContractManagerFeeWithdrawedIterator struct {
+	Event *RewardpoolContractManagerFeeWithdrawed // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *RewardpoolContractManagerFeeWithdrawedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(RewardpoolContractManagerFeeWithdrawed)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(RewardpoolContractManagerFeeWithdrawed)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *RewardpoolContractManagerFeeWithdrawedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *RewardpoolContractManagerFeeWithdrawedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// RewardpoolContractManagerFeeWithdrawed represents a ManagerFeeWithdrawed event raised by the RewardpoolContract contract.
+type RewardpoolContractManagerFeeWithdrawed struct {
+	Amount *big.Int
+	To     common.Address
+	Raw    types.Log // Blockchain specific contextual infos
+}
+
+// FilterManagerFeeWithdrawed is a free log retrieval operation binding the contract event 0x2425aa1fadefc5c570850aa9c9e3dfa4fc6b43ccd1c05b47db38dd6518a743b3.
+//
+// Solidity: event ManagerFeeWithdrawed(uint256 amount, address to)
+func (_RewardpoolContract *RewardpoolContractFilterer) FilterManagerFeeWithdrawed(opts *bind.FilterOpts) (*RewardpoolContractManagerFeeWithdrawedIterator, error) {
+
+	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "ManagerFeeWithdrawed")
+	if err != nil {
+		return nil, err
+	}
+	return &RewardpoolContractManagerFeeWithdrawedIterator{contract: _RewardpoolContract.contract, event: "ManagerFeeWithdrawed", logs: logs, sub: sub}, nil
+}
+
+// WatchManagerFeeWithdrawed is a free log subscription operation binding the contract event 0x2425aa1fadefc5c570850aa9c9e3dfa4fc6b43ccd1c05b47db38dd6518a743b3.
+//
+// Solidity: event ManagerFeeWithdrawed(uint256 amount, address to)
+func (_RewardpoolContract *RewardpoolContractFilterer) WatchManagerFeeWithdrawed(opts *bind.WatchOpts, sink chan<- *RewardpoolContractManagerFeeWithdrawed) (event.Subscription, error) {
+
+	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "ManagerFeeWithdrawed")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(RewardpoolContractManagerFeeWithdrawed)
+				if err := _RewardpoolContract.contract.UnpackLog(event, "ManagerFeeWithdrawed", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseManagerFeeWithdrawed is a log parse operation binding the contract event 0x2425aa1fadefc5c570850aa9c9e3dfa4fc6b43ccd1c05b47db38dd6518a743b3.
+//
+// Solidity: event ManagerFeeWithdrawed(uint256 amount, address to)
+func (_RewardpoolContract *RewardpoolContractFilterer) ParseManagerFeeWithdrawed(log types.Log) (*RewardpoolContractManagerFeeWithdrawed, error) {
+	event := new(RewardpoolContractManagerFeeWithdrawed)
+	if err := _RewardpoolContract.contract.UnpackLog(event, "ManagerFeeWithdrawed", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
 // RewardpoolContractPausedIterator is returned from FilterPaused and is used to iterate over the raw logs and unpacked data for Paused events raised by the RewardpoolContract contract.
 type RewardpoolContractPausedIterator struct {
 	Event *RewardpoolContractPaused // Event containing the contract specifics and raw log
@@ -1482,9 +1577,9 @@ func (_RewardpoolContract *RewardpoolContractFilterer) ParsePaused(log types.Log
 	return event, nil
 }
 
-// RewardpoolContractRewardPoolContractSetIterator is returned from FilterRewardPoolContractSet and is used to iterate over the raw logs and unpacked data for RewardPoolContractSet events raised by the RewardpoolContract contract.
-type RewardpoolContractRewardPoolContractSetIterator struct {
-	Event *RewardpoolContractRewardPoolContractSet // Event containing the contract specifics and raw log
+// RewardpoolContractPoolJoinedIterator is returned from FilterPoolJoined and is used to iterate over the raw logs and unpacked data for PoolJoined events raised by the RewardpoolContract contract.
+type RewardpoolContractPoolJoinedIterator struct {
+	Event *RewardpoolContractPoolJoined // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1498,7 +1593,7 @@ type RewardpoolContractRewardPoolContractSetIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractRewardPoolContractSetIterator) Next() bool {
+func (it *RewardpoolContractPoolJoinedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1507,7 +1602,7 @@ func (it *RewardpoolContractRewardPoolContractSetIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(RewardpoolContractRewardPoolContractSet)
+			it.Event = new(RewardpoolContractPoolJoined)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1522,7 +1617,7 @@ func (it *RewardpoolContractRewardPoolContractSetIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(RewardpoolContractRewardPoolContractSet)
+		it.Event = new(RewardpoolContractPoolJoined)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1538,41 +1633,42 @@ func (it *RewardpoolContractRewardPoolContractSetIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractRewardPoolContractSetIterator) Error() error {
+func (it *RewardpoolContractPoolJoinedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *RewardpoolContractRewardPoolContractSetIterator) Close() error {
+func (it *RewardpoolContractPoolJoinedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// RewardpoolContractRewardPoolContractSet represents a RewardPoolContractSet event raised by the RewardpoolContract contract.
-type RewardpoolContractRewardPoolContractSet struct {
-	Addr common.Address
-	Raw  types.Log // Blockchain specific contextual infos
+// RewardpoolContractPoolJoined represents a PoolJoined event raised by the RewardpoolContract contract.
+type RewardpoolContractPoolJoined struct {
+	Claimaddr common.Address
+	Amount    *big.Int
+	Raw       types.Log // Blockchain specific contextual infos
 }
 
-// FilterRewardPoolContractSet is a free log retrieval operation binding the contract event 0x7e2602838378170d01002df4f80426d046e484841f67339edd3213b1875b1a89.
+// FilterPoolJoined is a free log retrieval operation binding the contract event 0x7a011ddbb8da163de89faccb018bb75c616e6ac270738b8bf1785f08ae1b2d6f.
 //
-// Solidity: event RewardPoolContractSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterRewardPoolContractSet(opts *bind.FilterOpts) (*RewardpoolContractRewardPoolContractSetIterator, error) {
+// Solidity: event PoolJoined(address claimaddr, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) FilterPoolJoined(opts *bind.FilterOpts) (*RewardpoolContractPoolJoinedIterator, error) {
 
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "RewardPoolContractSet")
+	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "PoolJoined")
 	if err != nil {
 		return nil, err
 	}
-	return &RewardpoolContractRewardPoolContractSetIterator{contract: _RewardpoolContract.contract, event: "RewardPoolContractSet", logs: logs, sub: sub}, nil
+	return &RewardpoolContractPoolJoinedIterator{contract: _RewardpoolContract.contract, event: "PoolJoined", logs: logs, sub: sub}, nil
 }
 
-// WatchRewardPoolContractSet is a free log subscription operation binding the contract event 0x7e2602838378170d01002df4f80426d046e484841f67339edd3213b1875b1a89.
+// WatchPoolJoined is a free log subscription operation binding the contract event 0x7a011ddbb8da163de89faccb018bb75c616e6ac270738b8bf1785f08ae1b2d6f.
 //
-// Solidity: event RewardPoolContractSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchRewardPoolContractSet(opts *bind.WatchOpts, sink chan<- *RewardpoolContractRewardPoolContractSet) (event.Subscription, error) {
+// Solidity: event PoolJoined(address claimaddr, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolJoined(opts *bind.WatchOpts, sink chan<- *RewardpoolContractPoolJoined) (event.Subscription, error) {
 
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "RewardPoolContractSet")
+	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "PoolJoined")
 	if err != nil {
 		return nil, err
 	}
@@ -1582,8 +1678,8 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchRewardPoolContractSe
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractRewardPoolContractSet)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "RewardPoolContractSet", log); err != nil {
+				event := new(RewardpoolContractPoolJoined)
+				if err := _RewardpoolContract.contract.UnpackLog(event, "PoolJoined", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1604,12 +1700,147 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchRewardPoolContractSe
 	}), nil
 }
 
-// ParseRewardPoolContractSet is a log parse operation binding the contract event 0x7e2602838378170d01002df4f80426d046e484841f67339edd3213b1875b1a89.
+// ParsePoolJoined is a log parse operation binding the contract event 0x7a011ddbb8da163de89faccb018bb75c616e6ac270738b8bf1785f08ae1b2d6f.
 //
-// Solidity: event RewardPoolContractSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParseRewardPoolContractSet(log types.Log) (*RewardpoolContractRewardPoolContractSet, error) {
-	event := new(RewardpoolContractRewardPoolContractSet)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "RewardPoolContractSet", log); err != nil {
+// Solidity: event PoolJoined(address claimaddr, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) ParsePoolJoined(log types.Log) (*RewardpoolContractPoolJoined, error) {
+	event := new(RewardpoolContractPoolJoined)
+	if err := _RewardpoolContract.contract.UnpackLog(event, "PoolJoined", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// RewardpoolContractPoolLeftIterator is returned from FilterPoolLeft and is used to iterate over the raw logs and unpacked data for PoolLeft events raised by the RewardpoolContract contract.
+type RewardpoolContractPoolLeftIterator struct {
+	Event *RewardpoolContractPoolLeft // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *RewardpoolContractPoolLeftIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(RewardpoolContractPoolLeft)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(RewardpoolContractPoolLeft)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *RewardpoolContractPoolLeftIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *RewardpoolContractPoolLeftIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// RewardpoolContractPoolLeft represents a PoolLeft event raised by the RewardpoolContract contract.
+type RewardpoolContractPoolLeft struct {
+	Claimaddr common.Address
+	Amount    *big.Int
+	Raw       types.Log // Blockchain specific contextual infos
+}
+
+// FilterPoolLeft is a free log retrieval operation binding the contract event 0x2373ba50c89b5b6e3cef03a86b289adf6dc8e858f5eab523bbc3fd4caa328372.
+//
+// Solidity: event PoolLeft(address claimaddr, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) FilterPoolLeft(opts *bind.FilterOpts) (*RewardpoolContractPoolLeftIterator, error) {
+
+	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "PoolLeft")
+	if err != nil {
+		return nil, err
+	}
+	return &RewardpoolContractPoolLeftIterator{contract: _RewardpoolContract.contract, event: "PoolLeft", logs: logs, sub: sub}, nil
+}
+
+// WatchPoolLeft is a free log subscription operation binding the contract event 0x2373ba50c89b5b6e3cef03a86b289adf6dc8e858f5eab523bbc3fd4caa328372.
+//
+// Solidity: event PoolLeft(address claimaddr, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolLeft(opts *bind.WatchOpts, sink chan<- *RewardpoolContractPoolLeft) (event.Subscription, error) {
+
+	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "PoolLeft")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(RewardpoolContractPoolLeft)
+				if err := _RewardpoolContract.contract.UnpackLog(event, "PoolLeft", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParsePoolLeft is a log parse operation binding the contract event 0x2373ba50c89b5b6e3cef03a86b289adf6dc8e858f5eab523bbc3fd4caa328372.
+//
+// Solidity: event PoolLeft(address claimaddr, uint256 amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) ParsePoolLeft(log types.Log) (*RewardpoolContractPoolLeft, error) {
+	event := new(RewardpoolContractPoolLeft)
+	if err := _RewardpoolContract.contract.UnpackLog(event, "PoolLeft", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -2096,409 +2327,6 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchRoleRevoked(opts *bi
 func (_RewardpoolContract *RewardpoolContractFilterer) ParseRoleRevoked(log types.Log) (*RewardpoolContractRoleRevoked, error) {
 	event := new(RewardpoolContractRoleRevoked)
 	if err := _RewardpoolContract.contract.UnpackLog(event, "RoleRevoked", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// RewardpoolContractShangHaiStatusIterator is returned from FilterShangHaiStatus and is used to iterate over the raw logs and unpacked data for ShangHaiStatus events raised by the RewardpoolContract contract.
-type RewardpoolContractShangHaiStatusIterator struct {
-	Event *RewardpoolContractShangHaiStatus // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractShangHaiStatusIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(RewardpoolContractShangHaiStatus)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(RewardpoolContractShangHaiStatus)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractShangHaiStatusIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *RewardpoolContractShangHaiStatusIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// RewardpoolContractShangHaiStatus represents a ShangHaiStatus event raised by the RewardpoolContract contract.
-type RewardpoolContractShangHaiStatus struct {
-	Status bool
-	Raw    types.Log // Blockchain specific contextual infos
-}
-
-// FilterShangHaiStatus is a free log retrieval operation binding the contract event 0x7741ff6843f2be5a10355f0eaa2f114a7532b9748536e5fc2d1e73e836db3028.
-//
-// Solidity: event ShangHaiStatus(bool status)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterShangHaiStatus(opts *bind.FilterOpts) (*RewardpoolContractShangHaiStatusIterator, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "ShangHaiStatus")
-	if err != nil {
-		return nil, err
-	}
-	return &RewardpoolContractShangHaiStatusIterator{contract: _RewardpoolContract.contract, event: "ShangHaiStatus", logs: logs, sub: sub}, nil
-}
-
-// WatchShangHaiStatus is a free log subscription operation binding the contract event 0x7741ff6843f2be5a10355f0eaa2f114a7532b9748536e5fc2d1e73e836db3028.
-//
-// Solidity: event ShangHaiStatus(bool status)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchShangHaiStatus(opts *bind.WatchOpts, sink chan<- *RewardpoolContractShangHaiStatus) (event.Subscription, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "ShangHaiStatus")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractShangHaiStatus)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "ShangHaiStatus", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseShangHaiStatus is a log parse operation binding the contract event 0x7741ff6843f2be5a10355f0eaa2f114a7532b9748536e5fc2d1e73e836db3028.
-//
-// Solidity: event ShangHaiStatus(bool status)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParseShangHaiStatus(log types.Log) (*RewardpoolContractShangHaiStatus, error) {
-	event := new(RewardpoolContractShangHaiStatus)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "ShangHaiStatus", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// RewardpoolContractSignerSetIterator is returned from FilterSignerSet and is used to iterate over the raw logs and unpacked data for SignerSet events raised by the RewardpoolContract contract.
-type RewardpoolContractSignerSetIterator struct {
-	Event *RewardpoolContractSignerSet // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractSignerSetIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(RewardpoolContractSignerSet)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(RewardpoolContractSignerSet)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractSignerSetIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *RewardpoolContractSignerSetIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// RewardpoolContractSignerSet represents a SignerSet event raised by the RewardpoolContract contract.
-type RewardpoolContractSignerSet struct {
-	Addr common.Address
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterSignerSet is a free log retrieval operation binding the contract event 0x9eaa897564d022fb8c5efaf0acdb5d9d27b440b2aad44400b6e1c702e65b9ed3.
-//
-// Solidity: event SignerSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterSignerSet(opts *bind.FilterOpts) (*RewardpoolContractSignerSetIterator, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "SignerSet")
-	if err != nil {
-		return nil, err
-	}
-	return &RewardpoolContractSignerSetIterator{contract: _RewardpoolContract.contract, event: "SignerSet", logs: logs, sub: sub}, nil
-}
-
-// WatchSignerSet is a free log subscription operation binding the contract event 0x9eaa897564d022fb8c5efaf0acdb5d9d27b440b2aad44400b6e1c702e65b9ed3.
-//
-// Solidity: event SignerSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchSignerSet(opts *bind.WatchOpts, sink chan<- *RewardpoolContractSignerSet) (event.Subscription, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "SignerSet")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractSignerSet)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "SignerSet", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseSignerSet is a log parse operation binding the contract event 0x9eaa897564d022fb8c5efaf0acdb5d9d27b440b2aad44400b6e1c702e65b9ed3.
-//
-// Solidity: event SignerSet(address addr)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParseSignerSet(log types.Log) (*RewardpoolContractSignerSet, error) {
-	event := new(RewardpoolContractSignerSet)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "SignerSet", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// RewardpoolContractStakedIterator is returned from FilterStaked and is used to iterate over the raw logs and unpacked data for Staked events raised by the RewardpoolContract contract.
-type RewardpoolContractStakedIterator struct {
-	Event *RewardpoolContractStaked // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractStakedIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(RewardpoolContractStaked)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(RewardpoolContractStaked)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractStakedIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *RewardpoolContractStakedIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// RewardpoolContractStaked represents a Staked event raised by the RewardpoolContract contract.
-type RewardpoolContractStaked struct {
-	Addr   common.Address
-	Amount *big.Int
-	Raw    types.Log // Blockchain specific contextual infos
-}
-
-// FilterStaked is a free log retrieval operation binding the contract event 0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d.
-//
-// Solidity: event Staked(address addr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterStaked(opts *bind.FilterOpts) (*RewardpoolContractStakedIterator, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "Staked")
-	if err != nil {
-		return nil, err
-	}
-	return &RewardpoolContractStakedIterator{contract: _RewardpoolContract.contract, event: "Staked", logs: logs, sub: sub}, nil
-}
-
-// WatchStaked is a free log subscription operation binding the contract event 0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d.
-//
-// Solidity: event Staked(address addr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchStaked(opts *bind.WatchOpts, sink chan<- *RewardpoolContractStaked) (event.Subscription, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "Staked")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractStaked)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "Staked", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseStaked is a log parse operation binding the contract event 0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d.
-//
-// Solidity: event Staked(address addr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParseStaked(log types.Log) (*RewardpoolContractStaked, error) {
-	event := new(RewardpoolContractStaked)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "Staked", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
