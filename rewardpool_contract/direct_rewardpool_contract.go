@@ -30,7 +30,7 @@ var (
 
 // RewardpoolContractMetaData contains all meta data concerning the RewardpoolContract contract.
 var RewardpoolContractMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"ManagerFeeSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"ManagerFeeWithdrawed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"PoolJoined\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"PoolLeft\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"CONTROLLER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"claimRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"claimRewardsFor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingManagerRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"}],\"name\":\"getPendingReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"joinpool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"claimaddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"leavepool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"managerFeeShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"setManagerFeeShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"updateReward\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"accSharePoint\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"rewardBalance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"withdrawManagerRevenue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"type\":\"constructor\",\"inputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"receive\",\"stateMutability\":\"payable\"},{\"type\":\"function\",\"name\":\"CONTROLLER_ROLE\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"DEFAULT_ADMIN_ROLE\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"MANAGER_ROLE\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"ORACLE_ROLE\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"PAUSER_ROLE\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"claimRewards\",\"inputs\":[{\"name\":\"beneficiary\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"claimRewardsFor\",\"inputs\":[{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"getAccountedBalance\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getPendingManagerRevenue\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getPendingReward\",\"inputs\":[{\"name\":\"claimaddr\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getRoleAdmin\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"getTotalShare\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"grantRole\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"},{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"hasRole\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"},{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"initialize\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"managerFeeShare\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"pause\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"paused\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"renounceRole\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"},{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"revokeRole\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"},{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"setManagerFeeShare\",\"inputs\":[{\"name\":\"milli\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"supportsInterface\",\"inputs\":[{\"name\":\"interfaceId\",\"type\":\"bytes4\",\"internalType\":\"bytes4\"}],\"outputs\":[{\"name\":\"\",\"type\":\"bool\",\"internalType\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"unpause\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"updatePool\",\"inputs\":[{\"name\":\"claimaddrs\",\"type\":\"address[]\",\"internalType\":\"address[]\"},{\"name\":\"deltas\",\"type\":\"int256[]\",\"internalType\":\"int256[]\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"userInfo\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"accSharePoint\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"rewardBalance\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"withdrawManagerRevenue\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"to\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"event\",\"name\":\"Claimed\",\"inputs\":[{\"name\":\"beneficiary\",\"type\":\"address\",\"indexed\":false,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Initialized\",\"inputs\":[{\"name\":\"version\",\"type\":\"uint8\",\"indexed\":false,\"internalType\":\"uint8\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ManagerFeeSet\",\"inputs\":[{\"name\":\"milli\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"ManagerFeeWithdrawed\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"},{\"name\":\"to\",\"type\":\"address\",\"indexed\":false,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Paused\",\"inputs\":[{\"name\":\"account\",\"type\":\"address\",\"indexed\":false,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"PoolUpdate\",\"inputs\":[{\"name\":\"claimaddr\",\"type\":\"address[]\",\"indexed\":false,\"internalType\":\"address[]\"},{\"name\":\"amount\",\"type\":\"int256[]\",\"indexed\":false,\"internalType\":\"int256[]\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"RoleAdminChanged\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"indexed\":true,\"internalType\":\"bytes32\"},{\"name\":\"previousAdminRole\",\"type\":\"bytes32\",\"indexed\":true,\"internalType\":\"bytes32\"},{\"name\":\"newAdminRole\",\"type\":\"bytes32\",\"indexed\":true,\"internalType\":\"bytes32\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"RoleGranted\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"indexed\":true,\"internalType\":\"bytes32\"},{\"name\":\"account\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"sender\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"RoleRevoked\",\"inputs\":[{\"name\":\"role\",\"type\":\"bytes32\",\"indexed\":true,\"internalType\":\"bytes32\"},{\"name\":\"account\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"sender\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Unpaused\",\"inputs\":[{\"name\":\"account\",\"type\":\"address\",\"indexed\":false,\"internalType\":\"address\"}],\"anonymous\":false}]",
 }
 
 // RewardpoolContractABI is the input ABI used to generate the binding from.
@@ -270,6 +270,37 @@ func (_RewardpoolContract *RewardpoolContractSession) MANAGERROLE() ([32]byte, e
 // Solidity: function MANAGER_ROLE() view returns(bytes32)
 func (_RewardpoolContract *RewardpoolContractCallerSession) MANAGERROLE() ([32]byte, error) {
 	return _RewardpoolContract.Contract.MANAGERROLE(&_RewardpoolContract.CallOpts)
+}
+
+// ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
+//
+// Solidity: function ORACLE_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractCaller) ORACLEROLE(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _RewardpoolContract.contract.Call(opts, &out, "ORACLE_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
+//
+// Solidity: function ORACLE_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractSession) ORACLEROLE() ([32]byte, error) {
+	return _RewardpoolContract.Contract.ORACLEROLE(&_RewardpoolContract.CallOpts)
+}
+
+// ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
+//
+// Solidity: function ORACLE_ROLE() view returns(bytes32)
+func (_RewardpoolContract *RewardpoolContractCallerSession) ORACLEROLE() ([32]byte, error) {
+	return _RewardpoolContract.Contract.ORACLEROLE(&_RewardpoolContract.CallOpts)
 }
 
 // PAUSERROLE is a free data retrieval call binding the contract method 0xe63ab1e9.
@@ -716,48 +747,6 @@ func (_RewardpoolContract *RewardpoolContractTransactorSession) Initialize() (*t
 	return _RewardpoolContract.Contract.Initialize(&_RewardpoolContract.TransactOpts)
 }
 
-// Joinpool is a paid mutator transaction binding the contract method 0x3dc64df2.
-//
-// Solidity: function joinpool(address claimaddr, uint256 amount) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) Joinpool(opts *bind.TransactOpts, claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "joinpool", claimaddr, amount)
-}
-
-// Joinpool is a paid mutator transaction binding the contract method 0x3dc64df2.
-//
-// Solidity: function joinpool(address claimaddr, uint256 amount) returns()
-func (_RewardpoolContract *RewardpoolContractSession) Joinpool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Joinpool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
-}
-
-// Joinpool is a paid mutator transaction binding the contract method 0x3dc64df2.
-//
-// Solidity: function joinpool(address claimaddr, uint256 amount) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) Joinpool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Joinpool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
-}
-
-// Leavepool is a paid mutator transaction binding the contract method 0xf7eabbf1.
-//
-// Solidity: function leavepool(address claimaddr, uint256 amount) returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) Leavepool(opts *bind.TransactOpts, claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "leavepool", claimaddr, amount)
-}
-
-// Leavepool is a paid mutator transaction binding the contract method 0xf7eabbf1.
-//
-// Solidity: function leavepool(address claimaddr, uint256 amount) returns()
-func (_RewardpoolContract *RewardpoolContractSession) Leavepool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Leavepool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
-}
-
-// Leavepool is a paid mutator transaction binding the contract method 0xf7eabbf1.
-//
-// Solidity: function leavepool(address claimaddr, uint256 amount) returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) Leavepool(claimaddr common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.Leavepool(&_RewardpoolContract.TransactOpts, claimaddr, amount)
-}
-
 // Pause is a paid mutator transaction binding the contract method 0x8456cb59.
 //
 // Solidity: function pause() returns()
@@ -863,25 +852,25 @@ func (_RewardpoolContract *RewardpoolContractTransactorSession) Unpause() (*type
 	return _RewardpoolContract.Contract.Unpause(&_RewardpoolContract.TransactOpts)
 }
 
-// UpdateReward is a paid mutator transaction binding the contract method 0xf36c0a72.
+// UpdatePool is a paid mutator transaction binding the contract method 0x2a17c7e5.
 //
-// Solidity: function updateReward() returns()
-func (_RewardpoolContract *RewardpoolContractTransactor) UpdateReward(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _RewardpoolContract.contract.Transact(opts, "updateReward")
+// Solidity: function updatePool(address[] claimaddrs, int256[] deltas) returns()
+func (_RewardpoolContract *RewardpoolContractTransactor) UpdatePool(opts *bind.TransactOpts, claimaddrs []common.Address, deltas []*big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.contract.Transact(opts, "updatePool", claimaddrs, deltas)
 }
 
-// UpdateReward is a paid mutator transaction binding the contract method 0xf36c0a72.
+// UpdatePool is a paid mutator transaction binding the contract method 0x2a17c7e5.
 //
-// Solidity: function updateReward() returns()
-func (_RewardpoolContract *RewardpoolContractSession) UpdateReward() (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.UpdateReward(&_RewardpoolContract.TransactOpts)
+// Solidity: function updatePool(address[] claimaddrs, int256[] deltas) returns()
+func (_RewardpoolContract *RewardpoolContractSession) UpdatePool(claimaddrs []common.Address, deltas []*big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.UpdatePool(&_RewardpoolContract.TransactOpts, claimaddrs, deltas)
 }
 
-// UpdateReward is a paid mutator transaction binding the contract method 0xf36c0a72.
+// UpdatePool is a paid mutator transaction binding the contract method 0x2a17c7e5.
 //
-// Solidity: function updateReward() returns()
-func (_RewardpoolContract *RewardpoolContractTransactorSession) UpdateReward() (*types.Transaction, error) {
-	return _RewardpoolContract.Contract.UpdateReward(&_RewardpoolContract.TransactOpts)
+// Solidity: function updatePool(address[] claimaddrs, int256[] deltas) returns()
+func (_RewardpoolContract *RewardpoolContractTransactorSession) UpdatePool(claimaddrs []common.Address, deltas []*big.Int) (*types.Transaction, error) {
+	return _RewardpoolContract.Contract.UpdatePool(&_RewardpoolContract.TransactOpts, claimaddrs, deltas)
 }
 
 // WithdrawManagerRevenue is a paid mutator transaction binding the contract method 0xac9a5f56.
@@ -1598,9 +1587,9 @@ func (_RewardpoolContract *RewardpoolContractFilterer) ParsePaused(log types.Log
 	return event, nil
 }
 
-// RewardpoolContractPoolJoinedIterator is returned from FilterPoolJoined and is used to iterate over the raw logs and unpacked data for PoolJoined events raised by the RewardpoolContract contract.
-type RewardpoolContractPoolJoinedIterator struct {
-	Event *RewardpoolContractPoolJoined // Event containing the contract specifics and raw log
+// RewardpoolContractPoolUpdateIterator is returned from FilterPoolUpdate and is used to iterate over the raw logs and unpacked data for PoolUpdate events raised by the RewardpoolContract contract.
+type RewardpoolContractPoolUpdateIterator struct {
+	Event *RewardpoolContractPoolUpdate // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1614,7 +1603,7 @@ type RewardpoolContractPoolJoinedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractPoolJoinedIterator) Next() bool {
+func (it *RewardpoolContractPoolUpdateIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1623,7 +1612,7 @@ func (it *RewardpoolContractPoolJoinedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(RewardpoolContractPoolJoined)
+			it.Event = new(RewardpoolContractPoolUpdate)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1638,7 +1627,7 @@ func (it *RewardpoolContractPoolJoinedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(RewardpoolContractPoolJoined)
+		it.Event = new(RewardpoolContractPoolUpdate)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1654,42 +1643,42 @@ func (it *RewardpoolContractPoolJoinedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractPoolJoinedIterator) Error() error {
+func (it *RewardpoolContractPoolUpdateIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *RewardpoolContractPoolJoinedIterator) Close() error {
+func (it *RewardpoolContractPoolUpdateIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// RewardpoolContractPoolJoined represents a PoolJoined event raised by the RewardpoolContract contract.
-type RewardpoolContractPoolJoined struct {
-	Claimaddr common.Address
-	Amount    *big.Int
+// RewardpoolContractPoolUpdate represents a PoolUpdate event raised by the RewardpoolContract contract.
+type RewardpoolContractPoolUpdate struct {
+	Claimaddr []common.Address
+	Amount    []*big.Int
 	Raw       types.Log // Blockchain specific contextual infos
 }
 
-// FilterPoolJoined is a free log retrieval operation binding the contract event 0x7a011ddbb8da163de89faccb018bb75c616e6ac270738b8bf1785f08ae1b2d6f.
+// FilterPoolUpdate is a free log retrieval operation binding the contract event 0x2d12baed952e32deda21166272a112c0347541bb1ba77c3d58389be6ec3bfcff.
 //
-// Solidity: event PoolJoined(address claimaddr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterPoolJoined(opts *bind.FilterOpts) (*RewardpoolContractPoolJoinedIterator, error) {
+// Solidity: event PoolUpdate(address[] claimaddr, int256[] amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) FilterPoolUpdate(opts *bind.FilterOpts) (*RewardpoolContractPoolUpdateIterator, error) {
 
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "PoolJoined")
+	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "PoolUpdate")
 	if err != nil {
 		return nil, err
 	}
-	return &RewardpoolContractPoolJoinedIterator{contract: _RewardpoolContract.contract, event: "PoolJoined", logs: logs, sub: sub}, nil
+	return &RewardpoolContractPoolUpdateIterator{contract: _RewardpoolContract.contract, event: "PoolUpdate", logs: logs, sub: sub}, nil
 }
 
-// WatchPoolJoined is a free log subscription operation binding the contract event 0x7a011ddbb8da163de89faccb018bb75c616e6ac270738b8bf1785f08ae1b2d6f.
+// WatchPoolUpdate is a free log subscription operation binding the contract event 0x2d12baed952e32deda21166272a112c0347541bb1ba77c3d58389be6ec3bfcff.
 //
-// Solidity: event PoolJoined(address claimaddr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolJoined(opts *bind.WatchOpts, sink chan<- *RewardpoolContractPoolJoined) (event.Subscription, error) {
+// Solidity: event PoolUpdate(address[] claimaddr, int256[] amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolUpdate(opts *bind.WatchOpts, sink chan<- *RewardpoolContractPoolUpdate) (event.Subscription, error) {
 
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "PoolJoined")
+	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "PoolUpdate")
 	if err != nil {
 		return nil, err
 	}
@@ -1699,8 +1688,8 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolJoined(opts *bin
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractPoolJoined)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "PoolJoined", log); err != nil {
+				event := new(RewardpoolContractPoolUpdate)
+				if err := _RewardpoolContract.contract.UnpackLog(event, "PoolUpdate", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1721,147 +1710,12 @@ func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolJoined(opts *bin
 	}), nil
 }
 
-// ParsePoolJoined is a log parse operation binding the contract event 0x7a011ddbb8da163de89faccb018bb75c616e6ac270738b8bf1785f08ae1b2d6f.
+// ParsePoolUpdate is a log parse operation binding the contract event 0x2d12baed952e32deda21166272a112c0347541bb1ba77c3d58389be6ec3bfcff.
 //
-// Solidity: event PoolJoined(address claimaddr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParsePoolJoined(log types.Log) (*RewardpoolContractPoolJoined, error) {
-	event := new(RewardpoolContractPoolJoined)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "PoolJoined", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// RewardpoolContractPoolLeftIterator is returned from FilterPoolLeft and is used to iterate over the raw logs and unpacked data for PoolLeft events raised by the RewardpoolContract contract.
-type RewardpoolContractPoolLeftIterator struct {
-	Event *RewardpoolContractPoolLeft // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *RewardpoolContractPoolLeftIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(RewardpoolContractPoolLeft)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(RewardpoolContractPoolLeft)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *RewardpoolContractPoolLeftIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *RewardpoolContractPoolLeftIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// RewardpoolContractPoolLeft represents a PoolLeft event raised by the RewardpoolContract contract.
-type RewardpoolContractPoolLeft struct {
-	Claimaddr common.Address
-	Amount    *big.Int
-	Raw       types.Log // Blockchain specific contextual infos
-}
-
-// FilterPoolLeft is a free log retrieval operation binding the contract event 0x2373ba50c89b5b6e3cef03a86b289adf6dc8e858f5eab523bbc3fd4caa328372.
-//
-// Solidity: event PoolLeft(address claimaddr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) FilterPoolLeft(opts *bind.FilterOpts) (*RewardpoolContractPoolLeftIterator, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.FilterLogs(opts, "PoolLeft")
-	if err != nil {
-		return nil, err
-	}
-	return &RewardpoolContractPoolLeftIterator{contract: _RewardpoolContract.contract, event: "PoolLeft", logs: logs, sub: sub}, nil
-}
-
-// WatchPoolLeft is a free log subscription operation binding the contract event 0x2373ba50c89b5b6e3cef03a86b289adf6dc8e858f5eab523bbc3fd4caa328372.
-//
-// Solidity: event PoolLeft(address claimaddr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) WatchPoolLeft(opts *bind.WatchOpts, sink chan<- *RewardpoolContractPoolLeft) (event.Subscription, error) {
-
-	logs, sub, err := _RewardpoolContract.contract.WatchLogs(opts, "PoolLeft")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(RewardpoolContractPoolLeft)
-				if err := _RewardpoolContract.contract.UnpackLog(event, "PoolLeft", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParsePoolLeft is a log parse operation binding the contract event 0x2373ba50c89b5b6e3cef03a86b289adf6dc8e858f5eab523bbc3fd4caa328372.
-//
-// Solidity: event PoolLeft(address claimaddr, uint256 amount)
-func (_RewardpoolContract *RewardpoolContractFilterer) ParsePoolLeft(log types.Log) (*RewardpoolContractPoolLeft, error) {
-	event := new(RewardpoolContractPoolLeft)
-	if err := _RewardpoolContract.contract.UnpackLog(event, "PoolLeft", log); err != nil {
+// Solidity: event PoolUpdate(address[] claimaddr, int256[] amount)
+func (_RewardpoolContract *RewardpoolContractFilterer) ParsePoolUpdate(log types.Log) (*RewardpoolContractPoolUpdate, error) {
+	event := new(RewardpoolContractPoolUpdate)
+	if err := _RewardpoolContract.contract.UnpackLog(event, "PoolUpdate", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
